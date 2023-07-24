@@ -87,49 +87,49 @@ flutter:
 
   assets:
           #Logo
-      - assets/logo.png
+      - pic/logo.png
 
           #Background
-      - assets/bg1.png
-      - assets/bg2.png
-      - assets/bg3.png
+      - pic/bg1.png
+      - pic/bg2.png
+      - pic/bg3.png
 
           #Image
-      - assets/recycle.png #รีไซเคิล
-      - assets/re1.png
-      - assets/re2.png
-      - assets/re3.png
-      - assets/re4.png
-      - assets/re5.png
-      - assets/re6.png
-      - assets/re7.png
-      - assets/re8.png
-      - assets/re9.png
-      - assets/re10.png
-      - assets/re11.png
-      - assets/re12.png
-      - assets/re13.png
+      - pic/recycle.png #รีไซเคิล
+      - pic/re1.png
+      - pic/re2.png
+      - pic/re3.png
+      - pic/re4.png
+      - pic/re5.png
+      - pic/re6.png
+      - pic/re7.png
+      - pic/re8.png
+      - pic/re9.png
+      - pic/re10.png
+      - pic/re11.png
+      - pic/re12.png
+      - pic/re13.png
 
 
-      - assets/inc.png #ขยะอินทรีย์
-      - assets/in1.png
-      - assets/in2.png
-      - assets/in3.png
-      - assets/in4.png
-      - assets/in5.png
-      - assets/in6.png
-      - assets/in7.png
-      - assets/in8.png
+      - pic/inc.png #ขยะอินทรีย์
+      - pic/in1.png
+      - pic/in2.png
+      - pic/in3.png
+      - pic/in4.png
+      - pic/in5.png
+      - pic/in6.png
+      - pic/in7.png
+      - pic/in8.png
 
-      - assets/rep1.png #รายงาน
-      - assets/rep2.png
-      - assets/rep3.png
-      - assets/rep4.png
+      - pic/rep1.png #รายงาน
+      - pic/rep2.png
+      - pic/rep3.png
+      - pic/rep4.png
 
-      - assets/about.png #เกี่ยวกับ
-      - assets/here_pub.png #จุดทิ้งขยะทั่วไป
-      - assets/product.png #ผลิตภัณฑ์
-      - assets/here.png #จุดทิ้ง
+      - pic/about.png #เกี่ยวกับ
+      - pic/here_pub.png #จุดทิ้งขยะทั่วไป
+      - pic/product.png #ผลิตภัณฑ์
+      - pic/here.png #จุดทิ้ง
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
