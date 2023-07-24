@@ -1,0 +1,26 @@
+- logo.png //โลโก้
+- bg1.png //พื้นหลัง1
+- bg2.png //พื้นหลัง2
+- bg3.png //พื้นหลัง3
+
+Image
+- recycle.png //รีไซเคิล
+- re1.png
+. . . . . 
+- re13.png
+
+- inc.png //อินทรีย์
+- in1.png
+. . . . .
+- in8.png
+
+- rep1.png //รายงาน
+. . . . . 
+- rep4.png 
+
+- about.png //เกี่ยวกับ
+- here_pub //จุดทิ้งขยะทั่วไป
+- product // ผลิตภัณฑ์
+- here.png //จุดทิ้ง
+
+

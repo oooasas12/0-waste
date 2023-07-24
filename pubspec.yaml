@@ -52,6 +52,84 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+    - family: PSL114
+      fonts:
+       - asset: fonts/PSL114.ttf
+
+    - family: PSL114pro
+      fonts:
+        - asset: fonts/PSL114pro.ttf
+
+    - family: PSL115
+      fonts:
+        - asset: fonts/PSL115.ttf
+
+    - family: PSL115pro
+      fonts:
+        - asset: fonts/PSL115pro.ttf
+
+    - family: PSL116
+      fonts:
+        - asset: fonts/PSL116.ttf
+
+    - family: PSL116pro
+      fonts:
+        - asset: fonts/PSL116pro.ttf
+
+    - family: PSL117
+      fonts:
+        - asset: fonts/PSL117.ttf
+
+    - family: PSL117pro
+      fonts:
+        - asset: fonts/PSL117pro.ttf
+
+  assets:
+          #Logo
+      - assets/logo.png
+
+          #Background
+      - assets/bg1.png
+      - assets/bg2.png
+      - assets/bg3.png
+
+          #Image
+      - assets/recycle.png #รีไซเคิล
+      - assets/re1.png
+      - assets/re2.png
+      - assets/re3.png
+      - assets/re4.png
+      - assets/re5.png
+      - assets/re6.png
+      - assets/re7.png
+      - assets/re8.png
+      - assets/re9.png
+      - assets/re10.png
+      - assets/re11.png
+      - assets/re12.png
+      - assets/re13.png
+
+
+      - assets/inc.png #ขยะอินทรีย์
+      - assets/in1.png
+      - assets/in2.png
+      - assets/in3.png
+      - assets/in4.png
+      - assets/in5.png
+      - assets/in6.png
+      - assets/in7.png
+      - assets/in8.png
+
+      - assets/rep1.png #รายงาน
+      - assets/rep2.png
+      - assets/rep3.png
+      - assets/rep4.png
+
+      - assets/about.png #เกี่ยวกับ
+      - assets/here_pub.png #จุดทิ้งขยะทั่วไป
+      - assets/product.png #ผลิตภัณฑ์
+      - assets/here.png #จุดทิ้ง
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -86,5 +164,6 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -98,7 +98,37 @@ class _MyHomePageState extends State<MyHomePage> {
           // how it positions its children. Here we use mainAxisAlignment to
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
-          // horizontal).
+          // horizontal).import 'package:flutter/material.dart';
+          //
+          // void main() {
+          //   runApp(const MyApp());
+          // }
+          //
+          // class MyApp extends StatelessWidget {
+          //   const MyApp({Key? key});
+          //
+          //   @override
+          //   Widget build(BuildContext context) {
+          //     return MaterialApp(
+          //       home: Scaffold(
+          //         body: Center(
+          //           child: Container(
+          //             width: MediaQuery.of(context)
+          //                 .size
+          //                 .width, // ความกว้างเท่ากับความกว้างของหน้าจอ
+          //             height: MediaQuery.of(context)
+          //                 .size
+          //                 .height, // ความสูงเท่ากับความสูงของหน้าจอ
+          //             child: Image.asset(
+          //               'assets/1.png',
+          //               fit: BoxFit.cover, // ขยายขนาดรูปภาพเต็มพื้นที่ของ Container
+          //             ),
+          //           ),
+          //         ),
+          //       ),
+          //     );
+          //   }
+          // }
           //
           // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
           // action in the IDE, or press "p" in the console), to see the
