@@ -130,6 +130,7 @@ flutter:
       - assets/here_pub.png #จุดทิ้งขยะทั่วไป
       - assets/product.png #ผลิตภัณฑ์
       - assets/here.png #จุดทิ้ง
+      - assets/game.png #เกม
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
