@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:waste/pages/register.dart';
+import 'package:waste/pages/recyclingpages.dart';
 
-class register extends StatefulWidget {
+class mainpages extends StatefulWidget {
   @override
   _registerState createState() => _registerState();
 }
 
-class _registerState extends State<register> {
+class _registerState extends State<mainpages> {
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,8 @@ class _registerState extends State<register> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 250,
+                    width: 260,
                     height: 100,
-
 
                     //padding: const EdgeInsets.all(9.0),
                     child: Row(
@@ -40,6 +39,7 @@ class _registerState extends State<register> {
                           width: 120,
                           height: 120,
                         ),
+
                         RichText(
                           text: const TextSpan(
                             style: TextStyle(
@@ -55,7 +55,7 @@ class _registerState extends State<register> {
                               TextSpan(
                                 text: 'ZERO WASTE',
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 33,
                                 ),
                               ),
                             ],
@@ -66,6 +66,7 @@ class _registerState extends State<register> {
                   ),
 
                   SizedBox(height: 10),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
 
@@ -79,7 +80,7 @@ class _registerState extends State<register> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return login();
+                                    return recyclingpages();
                                   }));
                             },
 
@@ -95,7 +96,7 @@ class _registerState extends State<register> {
                               ),
                             ),
                             child:Container(
-                              width: 160,
+                              width: 170,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFB3C469),
@@ -148,7 +149,7 @@ class _registerState extends State<register> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return register();
+                                    return mainpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
@@ -164,7 +165,7 @@ class _registerState extends State<register> {
 
                             child:
                             Container(
-                              width: 160,
+                              width: 170,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
@@ -217,7 +218,7 @@ class _registerState extends State<register> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return register();
+                                    return mainpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
@@ -233,7 +234,7 @@ class _registerState extends State<register> {
 
                             child:
                             Container(
-                              width: 160,
+                              width: 170,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
@@ -285,7 +286,7 @@ class _registerState extends State<register> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return register();
+                                    return mainpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
@@ -301,7 +302,7 @@ class _registerState extends State<register> {
 
                             child:
                             Container(
-                              width: 160,
+                              width: 170,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
@@ -351,6 +352,11 @@ class _registerState extends State<register> {
                       ),
                       SizedBox(height: 10),
 
+                      Container(
+                        width: 10,
+                        height: 10,
+                      ), //กำหนดช่องว่างระหว่างRow
+
                       // Row ที่สอง
                       Column(
                         children: [
@@ -359,7 +365,7 @@ class _registerState extends State<register> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return register();
+                                    return mainpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
@@ -377,7 +383,7 @@ class _registerState extends State<register> {
 
                             child:
                             Container(
-                              width: 160,
+                              width: 170,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
@@ -403,7 +409,7 @@ class _registerState extends State<register> {
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 34,
+                                        fontSize: 35,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
@@ -424,7 +430,7 @@ class _registerState extends State<register> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return register();
+                                    return mainpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
@@ -439,7 +445,7 @@ class _registerState extends State<register> {
                             ),
 
                             child:Container(
-                              width: 160,
+                              width: 170,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
@@ -494,7 +500,7 @@ class _registerState extends State<register> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return register();
+                                    return mainpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
@@ -509,7 +515,7 @@ class _registerState extends State<register> {
                             ),
 
                             child:Container(
-                              width: 160,
+                              width: 170,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
@@ -561,7 +567,7 @@ class _registerState extends State<register> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return register();
+                                    return mainpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
@@ -576,7 +582,7 @@ class _registerState extends State<register> {
                             ),
 
                             child:Container(
-                              width: 160,
+                              width: 170,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
@@ -602,7 +608,7 @@ class _registerState extends State<register> {
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 34,
+                                        fontSize: 35,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
@@ -618,7 +624,9 @@ class _registerState extends State<register> {
                           ),
                         ],
                       ),
+
                     ],
+
                   ),
 
                 ],

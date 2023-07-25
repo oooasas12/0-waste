@@ -90,7 +90,12 @@ class homePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) {
+                              return mainpages();
+                            }));
+                      },
                       child: Text('เข้าสู่ระบบ'),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromRGBO(66, 50, 14, 0.863),
@@ -100,10 +105,7 @@ class homePage extends StatelessWidget {
                     Padding(padding: EdgeInsets.all(10)),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (BuildContext context) {
-                              return register();
-                            }));
+
                       },
                       child: Text('สร้างบัญชี'),
                       style: ElevatedButton.styleFrom(
