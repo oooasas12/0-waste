@@ -11,29 +11,33 @@ class _registerState extends State<mainpages> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Stack(
-          fit: StackFit.expand, // ทำให้ Stack ขยายเต็มพื้นที่หน้าจอ
-          children: [
-            Image.asset(
-              'assets/bg1.png',
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/bg1.png'),
               fit: BoxFit.cover,
             ),
-            Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 260,
-                    height: 100,
-                    //padding: const EdgeInsets.all(9.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Image.asset(
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Transform.translate(
+                      offset: Offset(-5, -2),
+                      child: Transform.scale(
+                        scale: 1.4,
+                        child: Image.asset(
                           'assets/logo.png',
-                          width: 120,
-                          height: 120,
+                          width: 100,
                         ),
+                      ),
+                    ),
+                    Column(
+                      children: [
                         RichText(
                           text: const TextSpan(
                             style: TextStyle(
@@ -57,8 +61,10 @@ class _registerState extends State<mainpages> {
                         ),
                       ],
                     ),
-                  ),
+                  ],
+                ),
                   SizedBox(height: 10),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -84,14 +90,14 @@ class _registerState extends State<mainpages> {
                               ),
                             ),
                             child:Container(
-                              width: 170,
+                              width: 160,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFB3C469),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
-                                  width: 2.5,
+                                  width: 1.5,
                                 ),
                               ),
                               child: Row(
@@ -146,14 +152,14 @@ class _registerState extends State<mainpages> {
                               ),
                             ),
                             child: Container(
-                              width: 170,
+                              width: 160,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
-                                  width: 2.5,
+                                  width: 1.5,
                                 ),
                               ),
                               child: Row(
@@ -208,14 +214,14 @@ class _registerState extends State<mainpages> {
                               ),
                             ),
                             child: Container(
-                              width: 170,
+                              width: 160,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
-                                  width: 2.5,
+                                  width: 1.5,
                                 ),
                               ),
                               child: Row(
@@ -270,14 +276,14 @@ class _registerState extends State<mainpages> {
                               ),
                             ),
                             child: Container(
-                              width: 170,
+                              width: 160,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
-                                  width: 2.5,
+                                  width: 1.5,
                                 ),
                               ),
                               child: Row(
@@ -344,14 +350,14 @@ class _registerState extends State<mainpages> {
                             ),
                             child:
                             Container(
-                              width: 170,
+                              width: 160,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
-                                  width: 2.5,
+                                  width: 1.5,
                                 ),
                               ),
                               child: Row(
@@ -401,14 +407,14 @@ class _registerState extends State<mainpages> {
                               ),
                             ),
                             child:Container(
-                              width: 170,
+                              width: 160,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
-                                  width: 2.5,
+                                  width: 1.5,
                                 ),
                               ),
                               child: Row(
@@ -464,14 +470,14 @@ class _registerState extends State<mainpages> {
                             ),
 
                             child:Container(
-                              width: 170,
+                              width: 160,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
-                                  width: 2.5,
+                                  width: 1.5,
                                 ),
                               ),
                               child: Row(
@@ -526,14 +532,14 @@ class _registerState extends State<mainpages> {
                               ),
                             ),
                             child:Container(
-                              width: 170,
+                              width: 160,
                               height: 90,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
-                                  width: 2.5,
+                                  width: 1.5,
                                 ),
                               ),
 
@@ -550,7 +556,7 @@ class _registerState extends State<mainpages> {
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 35,
+                                        fontSize: 34,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
@@ -571,7 +577,6 @@ class _registerState extends State<mainpages> {
                 ],
               ),
             ),
-          ],
         ),
       ),
     );

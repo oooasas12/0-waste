@@ -32,53 +32,56 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(255, 242, 210, 1),
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/bg1.png'), fit: BoxFit.cover),
+            image: AssetImage('assets/bg1.png'),
+            fit: BoxFit.cover,
+          ),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(35.0),
+          padding: const EdgeInsets.all(30.0),
           child: Column(
-            children: [
-              // โลโก้กับชื่อแอพ
-              const SizedBox(
-                height: 75,
-              ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Transform.translate(
-                      offset: const Offset(0, 0),
-                      child: Transform.scale(
-                        scale: 1.15,
-                        child: Image.asset(
-                          'assets/logo.png',
-                          width: 100,
-                        ),
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Transform.translate(
+                    offset: Offset(-5, -2),
+                    child: Transform.scale(
+                      scale: 1.4,
+                      child: Image.asset(
+                        'assets/logo.png',
+                        width: 100,
                       ),
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Transform.translate(
-                          offset: const Offset(0, 0),
-                          child: const Text(
-                            'SRU',
-                            style: TextStyle(fontSize: 27),
+                  ),
+                  Column(
+                    children: [
+                      RichText(
+                        text: const TextSpan(
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily:'PSL116',
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
                           ),
+                          children: [
+                            TextSpan(
+                              text: 'SRU\n',
+                            ),
+                            TextSpan(
+                              text: 'ZERO WASTE',
+                              style: TextStyle(
+                                fontSize: 33,
+                              ),
+                            ),
+                          ],
                         ),
-                        Transform.translate(
-                          offset: const Offset(0, 0),
-                          child: const Text(
-                            'ZERO WASTE',
-                            style: TextStyle(fontSize: 18),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
 
               const SizedBox(
