@@ -91,9 +91,9 @@ class _registerState extends State<mainpages> {
                             ),
                             child:Container(
                               width: 160,
-                              height: 90,
+                              height: 80,
                               decoration: BoxDecoration(
-                                color: Color(0xFFB3C469),
+                                color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
@@ -101,30 +101,27 @@ class _registerState extends State<mainpages> {
                                 ),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
                                   Image.asset(
                                     'assets/recycle.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 80,
-                                    height: 80,
+                                    width: 60,
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    width: 1,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 35,
+                                        fontSize: 30,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: 'ขยะ\n',
-                                        ),
-                                        TextSpan(
-                                          text: 'รีไซเคิล', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
-                                          style: TextStyle(
-                                            fontSize: 35,
-                                          ),
+                                          text: 'ขยะรีไซเคิล',
                                         ),
                                       ],
                                     ),
@@ -153,7 +150,7 @@ class _registerState extends State<mainpages> {
                             ),
                             child: Container(
                               width: 160,
-                              height: 90,
+                              height: 80,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
@@ -163,30 +160,27 @@ class _registerState extends State<mainpages> {
                                 ),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
                                   Image.asset(
                                     'assets/inc.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 80,
-                                    height: 80,
+                                    width: 60,
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    width: 1,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 35,
+                                        fontSize: 30,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: 'ขยะ\n',
-                                        ),
-                                        TextSpan(
-                                          text: 'อินทรีย์', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
-                                          style: TextStyle(
-                                            fontSize: 35,
-                                          ),
+                                          text: 'ขยะอินทรีย์',
                                         ),
                                       ],
                                     ),
@@ -215,7 +209,7 @@ class _registerState extends State<mainpages> {
                             ),
                             child: Container(
                               width: 160,
-                              height: 90,
+                              height: 80,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
@@ -225,31 +219,29 @@ class _registerState extends State<mainpages> {
                                 ),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
                                   Image.asset(
                                     'assets/here_pub.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 80,
-                                    height: 80,
+                                    width: 60,
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    width: 1,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 35,
+                                        fontSize: 30,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: 'ขยะ\n',
+                                          text: 'ขยะทั่วไป',
                                         ),
-                                        TextSpan(
-                                          text: 'ทั่วไป', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
-                                          style: TextStyle(
-                                            fontSize: 35,
-                                          ),
-                                        ),
+
                                       ],
                                     ),
                                   ),
@@ -277,7 +269,7 @@ class _registerState extends State<mainpages> {
                             ),
                             child: Container(
                               width: 160,
-                              height: 90,
+                              height: 80,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
@@ -287,30 +279,27 @@ class _registerState extends State<mainpages> {
                                 ),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
                                   Image.asset(
                                     'assets/here.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 80,
-                                    height: 80,
+                                    width: 60,
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    width: 1,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 35,
+                                        fontSize: 30,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: 'จุด\n',
-                                        ),
-                                        TextSpan(
-                                          text: 'ทิ้งขยะ', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
-                                          style: TextStyle(
-                                            fontSize: 35,
-                                          ),
+                                          text: 'จุดทิ้งขยะ',
                                         ),
                                       ],
                                     ),
@@ -351,7 +340,7 @@ class _registerState extends State<mainpages> {
                             child:
                             Container(
                               width: 160,
-                              height: 90,
+                              height: 80,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
@@ -361,19 +350,22 @@ class _registerState extends State<mainpages> {
                                 ),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
                                   Image.asset(
                                     'assets/rep1.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 80,
-                                    height: 80,
+                                    width: 60,
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    width: 10,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 35,
+                                        fontSize: 30,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
@@ -389,7 +381,6 @@ class _registerState extends State<mainpages> {
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton(
-
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
@@ -408,7 +399,7 @@ class _registerState extends State<mainpages> {
                             ),
                             child:Container(
                               width: 160,
-                              height: 90,
+                              height: 80,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
@@ -418,30 +409,30 @@ class _registerState extends State<mainpages> {
                                 ),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
                                   Image.asset(
                                     'assets/product.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 80,
-                                    height: 80,
+                                    width: 60,
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    width: 1,
+                                  ),
+                                  Container(
+                                    width: 1,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 35,
+                                        fontSize: 30,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: 'ผลิต\n',
-                                        ),
-                                        TextSpan(
-                                          text: 'ภัณฑ์', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
-                                          style: TextStyle(
-                                            fontSize: 35,
-                                          ),
+                                          text: 'ผลิตภัณฑ์',
                                         ),
                                       ],
                                     ),
@@ -471,7 +462,7 @@ class _registerState extends State<mainpages> {
 
                             child:Container(
                               width: 160,
-                              height: 90,
+                              height: 80,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
@@ -481,19 +472,22 @@ class _registerState extends State<mainpages> {
                                 ),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
                                   Image.asset(
                                     'assets/game.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 80,
-                                    height: 80,
+                                    width: 60,
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    width: 1,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 35,
+                                        fontSize: 30,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
@@ -503,7 +497,7 @@ class _registerState extends State<mainpages> {
                                         TextSpan(
                                           text: 'แยกขยะ', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
                                           style: TextStyle(
-                                            fontSize: 35,
+                                            fontSize: 30,
                                           ),
                                         ),
                                       ],
@@ -533,7 +527,7 @@ class _registerState extends State<mainpages> {
                             ),
                             child:Container(
                               width: 160,
-                              height: 90,
+                              height: 80,
                               decoration: BoxDecoration(
                                 color: Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
@@ -544,19 +538,22 @@ class _registerState extends State<mainpages> {
                               ),
 
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
                                   Image.asset(
                                     'assets/about.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 80,
-                                    height: 80,
+                                    width: 60,
+                                    height: 60,
+                                  ),
+                                  Container(
+                                    width: 1,
                                   ),
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
                                         color: Colors.black,
                                         fontFamily:'PSL116',
-                                        fontSize: 34,
+                                        fontSize: 30,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [

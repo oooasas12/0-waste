@@ -94,7 +94,7 @@ class _registerState extends State<bankpages> {
                           width: 220,
                           height: 90,
                           decoration: BoxDecoration(
-                            color: Color(0xFFB3C469),
+                            color: Color(0xFFE3CB8E),
                             borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                             border: Border.all(
                               color: Colors.black,
@@ -102,7 +102,7 @@ class _registerState extends State<bankpages> {
                             ),
                           ),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                            //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                             children: [
                               Image.asset(
                                 'assets/re12.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
