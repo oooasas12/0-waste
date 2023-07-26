@@ -94,7 +94,7 @@ class _registerState extends State<bankpages> {
                           width: 220,
                           height: 90,
                           decoration: BoxDecoration(
-                            color: Color(0xFFE3CB8E),
+                            color: Color(0xFFB3C469),
                             borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                             border: Border.all(
                               color: Colors.black,
