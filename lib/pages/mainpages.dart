@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:waste/pages/recyclingpages.dart';
+import 'package:waste/pages/wasteherepages.dart';
 
 class mainpages extends StatefulWidget {
   @override
   _registerState createState() => _registerState();
 }
-
 class _registerState extends State<mainpages> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-
         body: Stack(
-
           fit: StackFit.expand, // ทำให้ Stack ขยายเต็มพื้นที่หน้าจอ
           children: [
             Image.asset(
@@ -28,18 +25,15 @@ class _registerState extends State<mainpages> {
                   Container(
                     width: 260,
                     height: 100,
-
                     //padding: const EdgeInsets.all(9.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                       children: [
                         Image.asset(
                           'assets/logo.png',
                           width: 120,
                           height: 120,
                         ),
-
                         RichText(
                           text: const TextSpan(
                             style: TextStyle(
@@ -64,26 +58,20 @@ class _registerState extends State<mainpages> {
                       ],
                     ),
                   ),
-
                   SizedBox(height: 10),
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-
                     children: [
                       // Row แรก
                       Column(
                         children: [
-
                           ElevatedButton(
-
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
                                     return recyclingpages();
                                   }));
                             },
-
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Color(0xFFEBE5D2), // กำหนดสีพื้นหลังของปุ่ม
                               elevation: 0,// กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
@@ -106,7 +94,6 @@ class _registerState extends State<mainpages> {
                                   width: 2.5,
                                 ),
                               ),
-
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
@@ -115,8 +102,6 @@ class _registerState extends State<mainpages> {
                                     width: 80,
                                     height: 80,
                                   ),
-
-
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
@@ -141,11 +126,9 @@ class _registerState extends State<mainpages> {
                                 ],
                               ),
                             ),
-
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton(
-
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
@@ -162,9 +145,7 @@ class _registerState extends State<mainpages> {
                                 borderRadius: BorderRadius.circular(20), // กำหนดรูปร่างของปุ่มเป็นขอบมน
                               ),
                             ),
-
-                            child:
-                            Container(
+                            child: Container(
                               width: 170,
                               height: 90,
                               decoration: BoxDecoration(
@@ -175,7 +156,6 @@ class _registerState extends State<mainpages> {
                                   width: 2.5,
                                 ),
                               ),
-
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
@@ -184,8 +164,6 @@ class _registerState extends State<mainpages> {
                                     width: 80,
                                     height: 80,
                                   ),
-
-
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
@@ -211,10 +189,8 @@ class _registerState extends State<mainpages> {
                               ),
                             ),
                           ),
-
                           const SizedBox(height: 10),
                           ElevatedButton(
-
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
@@ -231,9 +207,7 @@ class _registerState extends State<mainpages> {
                                 borderRadius: BorderRadius.circular(20), // กำหนดรูปร่างของปุ่มเป็นขอบมน
                               ),
                             ),
-
-                            child:
-                            Container(
+                            child: Container(
                               width: 170,
                               height: 90,
                               decoration: BoxDecoration(
@@ -244,7 +218,6 @@ class _registerState extends State<mainpages> {
                                   width: 2.5,
                                 ),
                               ),
-
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
@@ -253,8 +226,6 @@ class _registerState extends State<mainpages> {
                                     width: 80,
                                     height: 80,
                                   ),
-
-
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
@@ -282,11 +253,10 @@ class _registerState extends State<mainpages> {
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton(
-
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return mainpages();
+                                    return wasteherepages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
@@ -299,9 +269,7 @@ class _registerState extends State<mainpages> {
                                 borderRadius: BorderRadius.circular(20), // กำหนดรูปร่างของปุ่มเป็นขอบมน
                               ),
                             ),
-
-                            child:
-                            Container(
+                            child: Container(
                               width: 170,
                               height: 90,
                               decoration: BoxDecoration(
@@ -312,7 +280,6 @@ class _registerState extends State<mainpages> {
                                   width: 2.5,
                                 ),
                               ),
-
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
@@ -321,8 +288,6 @@ class _registerState extends State<mainpages> {
                                     width: 80,
                                     height: 80,
                                   ),
-
-
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
@@ -351,17 +316,15 @@ class _registerState extends State<mainpages> {
                         ],
                       ),
                       SizedBox(height: 10),
-
                       Container(
                         width: 10,
                         height: 10,
-                      ), //กำหนดช่องว่างระหว่างRow
+                  ), //กำหนดช่องว่างระหว่างRow
 
                       // Row ที่สอง
                       Column(
                         children: [
                           ElevatedButton(
-
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
@@ -379,8 +342,6 @@ class _registerState extends State<mainpages> {
                                 borderRadius: BorderRadius.circular(20), // กำหนดรูปร่างของปุ่มเป็นขอบมน
                               ),
                             ),
-
-
                             child:
                             Container(
                               width: 170,
@@ -393,7 +354,6 @@ class _registerState extends State<mainpages> {
                                   width: 2.5,
                                 ),
                               ),
-
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
@@ -402,8 +362,6 @@ class _registerState extends State<mainpages> {
                                     width: 80,
                                     height: 80,
                                   ),
-
-
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
@@ -422,7 +380,6 @@ class _registerState extends State<mainpages> {
                                 ],
                               ),
                             ),
-
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton(
@@ -443,7 +400,6 @@ class _registerState extends State<mainpages> {
                                 borderRadius: BorderRadius.circular(20), // กำหนดรูปร่างของปุ่มเป็นขอบมน
                               ),
                             ),
-
                             child:Container(
                               width: 170,
                               height: 90,
@@ -455,7 +411,6 @@ class _registerState extends State<mainpages> {
                                   width: 2.5,
                                 ),
                               ),
-
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
@@ -464,8 +419,6 @@ class _registerState extends State<mainpages> {
                                     width: 80,
                                     height: 80,
                                   ),
-
-
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
@@ -475,7 +428,6 @@ class _registerState extends State<mainpages> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                       children: [
-
                                         TextSpan(
                                           text: 'ผลิต\n',
                                         ),
@@ -485,8 +437,6 @@ class _registerState extends State<mainpages> {
                                             fontSize: 35,
                                           ),
                                         ),
-
-
                                       ],
                                     ),
                                   ),
@@ -496,7 +446,6 @@ class _registerState extends State<mainpages> {
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton(
-
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
@@ -525,7 +474,6 @@ class _registerState extends State<mainpages> {
                                   width: 2.5,
                                 ),
                               ),
-
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                                 children: [
@@ -534,8 +482,6 @@ class _registerState extends State<mainpages> {
                                     width: 80,
                                     height: 80,
                                   ),
-
-
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
@@ -563,7 +509,6 @@ class _registerState extends State<mainpages> {
                           ),
                           const SizedBox(height: 10),
                           ElevatedButton(
-
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
@@ -580,7 +525,6 @@ class _registerState extends State<mainpages> {
                                 borderRadius: BorderRadius.circular(20), // กำหนดรูปร่างของปุ่มเป็นขอบมน
                               ),
                             ),
-
                             child:Container(
                               width: 170,
                               height: 90,
@@ -601,8 +545,6 @@ class _registerState extends State<mainpages> {
                                     width: 80,
                                     height: 80,
                                   ),
-
-
                                   RichText(
                                     text: const TextSpan(
                                       style:  TextStyle(
@@ -624,19 +566,12 @@ class _registerState extends State<mainpages> {
                           ),
                         ],
                       ),
-
                     ],
-
                   ),
-
                 ],
               ),
             ),
           ],
-
-
-
-
         ),
       ),
     );
