@@ -10,7 +10,7 @@ class _registerState extends State<wasteherepages> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('wastehere'),
+        title: Text('wastehere 00'),
       ),
     );
   }
