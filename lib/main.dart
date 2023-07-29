@@ -4,7 +4,6 @@ import 'package:waste/pages/mainpages.dart';
 void main() {
   runApp(const MyApp());
 }
-
 // สร้าง Widget
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

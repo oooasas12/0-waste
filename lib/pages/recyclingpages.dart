@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:waste/pages/mainpages.dart';
-import 'package:waste/pages/bankpages.dart';
+import 'package:waste/pages/recycling/bankpages.dart';
+import 'package:waste/pages/recycling/volunteerpages.dart';
 
 class recyclingpages extends StatefulWidget {
   @override
@@ -72,25 +73,7 @@ class _registerState extends State<recyclingpages> {
                       // Row แรก
                       Column(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.of(context).push(
-                                  MaterialPageRoute(builder: (BuildContext context) {
-                                    return mainpages();
-                                  }));
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFEBE5D2), // กำหนดสีพื้นหลังของปุ่ม
-                              elevation: 0,// กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
-                              minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                              padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
-                              side: BorderSide.none, // กำหนดไม่มีกรอบสี
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),// กำหนดรูปร่างของปุ่มเป็นขอบมน
-                              ),
-                            ),
-                            child:Container(
+                          Container(
                               width: 220,
                               height: 90,
                               decoration: BoxDecoration(
@@ -133,7 +116,7 @@ class _registerState extends State<recyclingpages> {
                                 ],
                               ),
                             ),
-                          ),
+
                           const SizedBox(height: 10),
                           ElevatedButton(
                             onPressed: () {
@@ -199,7 +182,7 @@ class _registerState extends State<recyclingpages> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return mainpages();
+                                    return volunteerpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
@@ -257,12 +240,77 @@ class _registerState extends State<recyclingpages> {
                       ),
                     ],
                   ),
-                ],
-              ),
+                const SizedBox(height: 10),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 170,
+                        height: 100,
+                      ),
+                      SizedBox(width: 20), // ใส่ SizedBox เพื่อให้มีระยะห่างระหว่าง Container
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                                MaterialPageRoute(builder: (BuildContext context) {
+                                  return mainpages();
+                                }));
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                            minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
+                            padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
+                            side: BorderSide.none, // กำหนดไม่มีกรอบสี
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20), // กำหนดรูปร่างของปุ่มเป็นขอบมน
+                            ),
+                          ),
+                          child: Container(
+                            width: 100,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Color(0xFF302714),
+                              borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
+                              border: Border.all(
+                                color: Colors.black,
+                                width: 1.5,
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                              children: [
+
+                                RichText(
+                                  text: const TextSpan(
+                                    style:  TextStyle(
+                                      color: Colors.white,
+                                      fontFamily:'PSL116',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    children: [
+                                      TextSpan(
+                                        text: 'ย้อนกลับ', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
+                                        style: TextStyle(
+                                          fontSize: 25,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                    ],
+                  ),
+                ),
+
+              ],
             ),
-
-
-
+          ),
         ),
       ),
     );
