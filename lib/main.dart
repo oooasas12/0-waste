@@ -29,6 +29,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   // ตัวแปรรับข้อมูล
+  final _formKey = GlobalKey<FormState>();
+
   // // ตัวแปรรับข้อมูลจาก TextField
   TextEditingController phoneText = TextEditingController();
   TextEditingController passText = TextEditingController();
@@ -103,113 +105,139 @@ class _MyHomePageState extends State<MyHomePage> {
               // กรอกข้อมูล
               Container(
                 width: 322,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // ข้อความเข้าสุ่ระบบ
-                    const Text(
-                      'เข้าสู่ระบบ',
-                      style: TextStyle(fontFamily: 'PSL114', fontSize: 18),
-                    ),
-
-                    const SizedBox(height: 10), // ช่องว่าง
-
-                    // กรอกเบอร์โทรศัพท์
-                    TextField(
-                      controller:
-                          phoneText, // ข้อความที่ป้อนใน TextField นี้ ถูกเก็บไว้ในตัวแปร phoneText
-                      cursorColor: const Color.fromARGB(255, 140, 164, 59),
-                      decoration: InputDecoration(
-                        isDense: true,
-                        contentPadding: const EdgeInsets.only(
-                            left: 20, top: 12, bottom: 12),
-                        hintText: 'หมายเลขโทรศัพท์',
-                        hintStyle:
-                            const TextStyle(fontFamily: 'PSL114', fontSize: 19),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(11),
-                          borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 140, 164, 59),
-                          ),
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(11),
-                          borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 48, 39, 20),
-                          ),
-                        ),
+                child: Form(
+                  key: _formKey,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // ข้อความเข้าสุ่ระบบ
+                      const Text(
+                        'เข้าสู่ระบบ',
+                        style: TextStyle(fontFamily: 'PSL114', fontSize: 18),
                       ),
-                    ),
 
-                    const SizedBox(height: 15), // ช่องว่าง
+                      const SizedBox(height: 10), // ช่องว่าง
 
-                    // กรอกรหัสผ่าน
-                    TextField(
-                      controller:
-                          passText, // ข้อความที่ป้อนใน TextField นี้ ถูกเก็บไว้ในตัวแปร passText
-                      obscureText: _obscureText,
-                      cursorColor: const Color.fromARGB(255, 140, 164, 59),
-                      decoration: InputDecoration(
-                        isDense: true,
-                        contentPadding: const EdgeInsets.only(left: 20),
-                        hintText: 'รหัสผ่าน',
-                        hintStyle:
-                            const TextStyle(fontFamily: 'PSL114', fontSize: 19),
-                        suffixIcon: GestureDetector(
-                          // ไอคอนซ่อนและเปิดเผยรหัสผ่าน
-                          onTap: () {
-                            setState(() {
-                              _obscureText = !_obscureText;
-                            });
-                          },
-                          child: Icon(
-                            _obscureText
-                                ? Icons.visibility
-                                : Icons.visibility_off,
-                            color: Colors.grey,
-                          ),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(11),
-                          borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 140, 164, 59),
-                          ),
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(11),
-                          borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 48, 39, 20),
-                          ),
-                        ),
-                      ),
-                    ),
+                      // กรอกเบอร์โทรศัพท์
+                      TextFormField(
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'กรุณากรอกหมายเลขโทรศัพท์!';
+                          }
 
-                    const SizedBox(height: 5), // ช่องว่าง
-
-                    // ลืมรหัสผ่าน
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(248.5, 0, 0, 0),
-                      child: TextButton(
-                        onPressed: () {
-                          // ทำเมื่อกดปุ่ม
-                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) {
-                            return ForgotPassword();
-                          }));
+                          return null;
                         },
-                        style: TextButton.styleFrom(
-                          foregroundColor:
-                              const Color.fromARGB(255, 140, 164, 59),
-                        ),
-                        child: const Text(
-                          'ลืมรหัสผ่าน',
-                          style: TextStyle(
-                              fontFamily: 'PSL114',
-                              fontSize: 18,
-                              color: Colors.black),
+                        controller:
+                            phoneText, // ข้อความที่ป้อนใน TextField นี้ ถูกเก็บไว้ในตัวแปร phoneText
+                        cursorColor: const Color.fromARGB(255, 140, 164, 59),
+                        decoration: InputDecoration(
+                          errorStyle: const TextStyle(
+                            fontFamily: 'PSL114',
+                            fontSize: 18,
+                          ),
+                          isDense: true,
+                          contentPadding: const EdgeInsets.only(
+                              left: 20, top: 12, bottom: 12),
+                          hintText: 'หมายเลขโทรศัพท์',
+                          hintStyle: const TextStyle(
+                              fontFamily: 'PSL114', fontSize: 19),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(11),
+                            borderSide: const BorderSide(
+                              color: Color.fromARGB(255, 140, 164, 59),
+                            ),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(11),
+                            borderSide: const BorderSide(
+                              color: Color.fromARGB(255, 48, 39, 20),
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+
+                      const SizedBox(height: 15), // ช่องว่าง
+
+                      // กรอกรหัสผ่าน
+                      TextFormField(
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'กรุณากรอกรหัสผ่าน!';
+                          }
+
+                          return null;
+                        },
+                        controller:
+                            passText, // ข้อความที่ป้อนใน TextField นี้ ถูกเก็บไว้ในตัวแปร passText
+                        obscureText: _obscureText,
+                        cursorColor: const Color.fromARGB(255, 140, 164, 59),
+                        decoration: InputDecoration(
+                          errorStyle: const TextStyle(
+                            fontFamily: 'PSL114',
+                            fontSize: 18,
+                          ),
+                          isDense: true,
+                          contentPadding: const EdgeInsets.only(left: 20),
+                          hintText: 'รหัสผ่าน',
+                          hintStyle: const TextStyle(
+                              fontFamily: 'PSL114', fontSize: 19),
+                          suffixIcon: GestureDetector(
+                            // ไอคอนซ่อนและเปิดเผยรหัสผ่าน
+                            onTap: () {
+                              setState(() {
+                                _obscureText = !_obscureText;
+                              });
+                            },
+                            child: Icon(
+                              _obscureText
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(11),
+                            borderSide: const BorderSide(
+                              color: Color.fromARGB(255, 140, 164, 59),
+                            ),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(11),
+                            borderSide: const BorderSide(
+                              color: Color.fromARGB(255, 48, 39, 20),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(height: 5), // ช่องว่าง
+
+                      // ลืมรหัสผ่าน
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(248.5, 0, 0, 0),
+                        child: TextButton(
+                          onPressed: () {
+                            // ทำเมื่อกดปุ่ม
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) {
+                              return ForgotPassword();
+                            }));
+                          },
+                          style: TextButton.styleFrom(
+                            foregroundColor:
+                                const Color.fromARGB(255, 140, 164, 59),
+                          ),
+                          child: const Text(
+                            'ลืมรหัสผ่าน',
+                            style: TextStyle(
+                                fontFamily: 'PSL114',
+                                fontSize: 18,
+                                color: Colors.black),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
 
@@ -223,16 +251,20 @@ class _MyHomePageState extends State<MyHomePage> {
                     ElevatedButton(
                         onPressed: () {
                           // ทำเมื่อกดปุ่ม
-                          setState(() {
-                            // เก็บ value ใน TextField ลงตัวแปร
-                            _phone = phoneText.text;
-                            _pass = passText.text;
-                          });
 
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) {
-                            return mainpages();
-                          }));
+                          // เมื่อกดปุ่มเรียกใช้ฟังก์ชันที่ตรวจสอบ validator
+                          if (_formKey.currentState!.validate()) {
+                            setState(() {
+                              // เก็บ value ใน TextField ลงตัวแปร
+                              _phone = phoneText.text;
+                              _pass = passText.text;
+                            });
+
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) {
+                              return mainpages();
+                            }));
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                           fixedSize: const Size(300, 0),
@@ -279,7 +311,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     // ปุ่มสร้างบัญชี
                     ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) {
                             return CreateAccount();
                           }));
                         },
