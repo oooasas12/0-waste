@@ -59,53 +59,73 @@ class _CreateAccountState extends State<CreateAccount> {
                           const SizedBox(height: 10), // ช่องว่าง
 
                           // คำนำหน้าและกลุ่ม
-                          Row(
-                            children: [
-                              // คำนำหน้า
-                              Text('คำนำหน้า'),
+                          Form(
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    // คำนำหน้า
+                                    Text('คำนำหน้า'),
+                                    DropdownButtonFormField<String>(
+                                        value: selectedValue,
+                                        items:
+                                            dropdownItems.map((String value) {
+                                          return DropdownMenuItem<String>(
+                                            value: value,
+                                            child: Text(value),
+                                          );
+                                        }).toList(),
+                                        onChanged: (String? value) {
+                                          setState(() {
+                                            selectedValue = value!;
+                                          });
+                                        }),
 
-                              // กลุ่ม
-                              Text('กลุ่ม'),
-                            ],
-                          ),
-                          const SizedBox(height: 15), // ช่องว่าง
-
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              // หมายเลขโทรศัพท์
-                              Text('หมายเลขโทรศัพท์'),
-
-                              const SizedBox(height: 15), // ช่องว่าง
-
-                              // Email
-                              Text('Email'),
-
-                              const SizedBox(height: 15), // ช่องว่าง
-
-                              // กำหนดรหัสผ่าน
-                              Text('กำหนดรหัสผ่าน'),
-
-                              const SizedBox(height: 15), // ช่องว่าง
-
-                              // ยืนยันรหัสผ่าน
-                              Text('ยืนยันรหัสผ่าน'),
-
-                              const SizedBox(height: 15), // ช่องว่าง
-
-                              // ข้อความเกี่ยวกันการตั้งรหัสผ่าน
-                              Text('บลาๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆ'),
-
-                              const SizedBox(height: 20), // ช่องว่าง
-
-                              Padding(
-                                padding: EdgeInsets.only(left: 248.5),
-                                child: ElevatedButton(
-                                  onPressed: () {},
-                                  child: Text('ยืนยัน'),
+                                    // กลุ่ม
+                                    Text('กลุ่ม'),
+                                  ],
                                 ),
-                              ),
-                            ],
+                                const SizedBox(height: 15), // ช่องว่าง
+
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    // หมายเลขโทรศัพท์
+                                    Text('หมายเลขโทรศัพท์'),
+
+                                    const SizedBox(height: 15), // ช่องว่าง
+
+                                    // Email
+                                    Text('Email'),
+
+                                    const SizedBox(height: 15), // ช่องว่าง
+
+                                    // กำหนดรหัสผ่าน
+                                    Text('กำหนดรหัสผ่าน'),
+
+                                    const SizedBox(height: 15), // ช่องว่าง
+
+                                    // ยืนยันรหัสผ่าน
+                                    Text('ยืนยันรหัสผ่าน'),
+
+                                    const SizedBox(height: 15), // ช่องว่าง
+
+                                    // ข้อความเกี่ยวกันการตั้งรหัสผ่าน
+                                    Text('บลาๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆ'),
+
+                                    const SizedBox(height: 20), // ช่องว่าง
+
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 248.5),
+                                      child: ElevatedButton(
+                                        onPressed: () {},
+                                        child: Text('ยืนยัน'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:waste/pages/ForgotPassword.dart';
 import 'package:waste/pages/mainpages.dart';
+import 'package:waste/pages/ForgotPassword.dart';
 import 'package:waste/pages/CreateAccount.dart';
 
 void main() {
