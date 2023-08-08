@@ -5,7 +5,14 @@ class homeuserpages extends StatefulWidget {
   _registerState createState() => _registerState();
 }
 
+
 class _registerState extends State<homeuserpages> {
+  var a = 1807800010873;
+  var b = "Ploy Furesuwan";
+  var  c = 0980315126;
+  var d = 0;
+  var e = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -209,134 +216,70 @@ class _registerState extends State<homeuserpages> {
                         Container(
                           width: 200,
                           height: 62,
-
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
-                            children: [
-                              RichText(
-                                text: const TextSpan(
-                                  style:  TextStyle(
-                                    color: Colors.black,
-                                    fontFamily:'PSL116',
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text: '999-999-999-999',
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                          child: Center(
+                            child:Text(style: const TextStyle(
+                            color: Colors.black,
+                            fontFamily:'PSL116',
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                          ),'$a'),
+                         ),
                         ),
 
                       Container(
                         width: 200,
                         height: 62,
 
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
-                            children: [
-                              Container(
-                                width: 1,
-                              ),
-                              RichText(
-                                text: const TextSpan(
-                                  style:  TextStyle(
-                                    color: Colors.black,
-                                    fontFamily:'PSL116',
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text: 'Ploy Furesuwan',
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                        child: Center(
+                          child:Text(style: const TextStyle(
+                            color: Colors.black,
+                            fontFamily:'PSL116',
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                          ),'$b'),
+                         ),
                         ),
 
                       Container(
                         width: 200,
                         height: 62,
 
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
-                            children: [
-                              RichText(
-                                text: const TextSpan(
-                                  style:  TextStyle(
-                                    color: Colors.black,
-                                    fontFamily:'PSL116',
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text: '0980315127',
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                        child: Center(
+                          child:Text(
+                            style: const TextStyle(
+                            color: Colors.black,
+                            fontFamily:'PSL116',
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                          ),'$c'),
+                         ),
                         ),
 
                       Container(
                         width: 200,
                         height: 62,
 
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
-                            children: [
-
-                              RichText(
-                                text: const TextSpan(
-                                  style:  TextStyle(
-                                    color: Colors.black,
-                                    fontFamily:'PSL116',
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text: 'POINTS: 0',
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                        child: Center(
+                          child:Text(style: const TextStyle(
+                            color: Colors.black,
+                            fontFamily:'PSL116',
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                          ),'POINTS: $d'),
+                         ),
                         ),
 
                       Container(
                         width: 200,
                         height: 62,
 
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
-                          children: [
-                            RichText(
-                              text: const TextSpan(
-                                style:  TextStyle(
-                                  color: Colors.black,
-                                  fontFamily:'PSL116',
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: 'สิทธิ์ลุ้นรางวัล: 0',
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
+                        child: Center(
+                          child:Text(style: const TextStyle(
+                            color: Colors.black,
+                            fontFamily:'PSL116',
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                          ),'สิทธิ์ลุ้นรางวัล: $e'),
                         ),
                       ),
                     ],

@@ -8,6 +8,17 @@ class weightRepages extends StatefulWidget {
 class _registerState extends State<weightRepages> {
   @override
   Widget build(BuildContext context) {
+
+    var number1 = 1;
+    var number2 = 2;
+    var number3 = 3;
+    var number4 = 4;
+    var number5 = 5;
+    var number6 = 6;
+    var number7 = 7;
+    var number8 = 8;
+    var number9 = 9;
+
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -109,7 +120,201 @@ class _registerState extends State<weightRepages> {
                 ],
               ),
               const SizedBox(height: 20),
+              Row(
+                children: [
+                  Container(
+                    width: 210,
+                    height: 300,
 
+                    child: const Text(
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                          'ขวดพลาสติก\n'
+                          'ขวดนม ขวดแชมพู/โลชั่น\n'
+                          'กล่องกระดาษลัง\n'
+                          'กระดาษเอกสารขาว-ดำ\n'
+                          'กระดาษเอกสารสี\n'
+                          'กระป๋องอะลูมิเนียม\n'
+                          'ขวดแก้ว/ภาชนะแก้ว\n'
+                          'อื่นๆ'
+
+                    ),
+                  ),
+
+                  Container(
+                    width: 30,
+                    height: 300,
+                    child: const Text(
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ':\n'
+                            ':\n'
+                            ':\n'
+                            ':\n'
+                            ':\n'
+                            ':\n'
+                            ':\n'
+                            ':'
+                    ),
+                  ),
+                  Container(
+                    width: 50,
+                    height: 306,
+                    child: Column(
+                      children: [
+                        Text(style: const TextStyle(
+                              color: Colors.black,
+                              fontFamily:'PSL116',
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                            ),'$number1'),
+
+                        Text(style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),'$number2'),
+
+                        Text(style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),'$number3'),
+
+                        Text(style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),'$number4'),
+
+                        Text(style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),'$number5'),
+
+                        Text(style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),'$number6'),
+
+                        Text(style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),'$number7'),
+
+                        Text(style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),'$number8'),
+
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 40,
+                    height: 300,
+                    child: const Text(
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        'กก.\n'
+                            'กก.\n'
+                            'กก.\n'
+                            'กก.\n'
+                            'กก.\n'
+                            'กก.\n'
+                            'กก.\n'
+                            'กก.'
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  border: Border(
+                    top: BorderSide(
+                      color: Colors.black,  // สีขอบด้านบน
+                      width: 2.0,           // ความหนาของเส้นขอบ
+                    ),
+                  ),
+                ),
+                child: Row(
+                children: [
+                  Container(
+
+                    child: const Text(
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        'รวมน้ำหนักทั้งหมด         '
+                    ),
+                  ),
+                  Container(
+                    width: 39,
+                    child: const Text(
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        ':'
+                    ),
+                  ),
+                  Container(
+                    width: 43,
+                    child: Column(
+                      children: [
+                        Text(style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),'$number9'),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 40,
+
+                    child: const Text(
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily:'PSL116',
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold,
+                        ),
+                            'กก.'
+                    ),
+                  ),
+                ],
+              ),
+              ),
 
               Center(
                 child: Row(

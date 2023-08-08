@@ -8,6 +8,10 @@ class pointspages extends StatefulWidget {
 }
 
 class _registerState extends State<pointspages> {
+
+  var a = 10000;
+  var b = 2000;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -124,34 +128,32 @@ class _registerState extends State<pointspages> {
                                 width: 1.5,
                               ),
                             ),
-                            child: Row(
-                              //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
-
+                            child:Column(
                               children: [
-                                Container(width: 20,),
-                                RichText(
-                                  text: const TextSpan(
-                                    style:  TextStyle(
+                                const Row(
+                                  children: [
+                                    Text(
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontFamily:'PSL116',
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                        ),' POINTS ที่ได้รับ'),
+                                  ],
+                                ),
+
+                                const SizedBox(height: 15),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(style: const TextStyle(
                                       color: Colors.black,
                                       fontFamily:'PSL116',
-                                      fontSize: 35,
+                                      fontSize: 30,
                                       fontWeight: FontWeight.bold,
-                                    ),
-                                    children: [
-                                      TextSpan(
-                                        text: 'POINTS ที่ได้รับ\n', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: '0 POINTS', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                    ), '$a POINTS'),
+                                  ],
+
                                 ),
                               ],
                             ),
@@ -169,34 +171,32 @@ class _registerState extends State<pointspages> {
                                 width: 1.5,
                               ),
                             ),
-                            child: Row(
-                              //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                            child: Column(
                               children: [
-                                Container(width: 20,),
-                                RichText(
-                                  text: const TextSpan(
-                                    style:  TextStyle(
+                                const Row(
+                                  children: [
+                                    Text(
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontFamily:'PSL116',
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
+                                        ),' POINTS ทั้งหมด'),
+                                  ],
+                                ),
+
+                                const SizedBox(height: 15),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(style: const TextStyle(
                                       color: Colors.black,
                                       fontFamily:'PSL116',
-                                      fontSize: 35,
+                                      fontSize: 30,
                                       fontWeight: FontWeight.bold,
-                                    ),
-                                    children: [
+                                    ), '$b POINTS'),
+                                  ],
 
-                                      TextSpan(
-                                        text: 'POINTS ทั้งหมด\n', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: '0 POINTS', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
-                                        style: TextStyle(
-                                          fontSize: 30,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
                                 ),
                               ],
                             ),
@@ -224,7 +224,7 @@ class _registerState extends State<pointspages> {
                             width: 270,
                             height: 60,
                             decoration: BoxDecoration(
-                              color: Color(0xFFE3CB8E),
+                              color: const Color(0xFFB3C469),
                               borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                               border: Border.all(
                                 color: Colors.black,
