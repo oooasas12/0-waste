@@ -21,7 +21,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 const SizedBox(height: 50), // ช่องว่าง
 
                 Container(
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       // ชื่อหน้า
