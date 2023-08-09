@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:waste/pages/mainpages.dart';
-import 'package:waste/pages/ForgotPassword.dart';
-import 'package:waste/pages/CreateAccount.dart';
+import 'package:waste/pages/forgot_password.dart';
+import 'package:waste/pages/create_account.dart';
 
 void main() {
   runApp(const MyApp());
@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
               // กรอกข้อมูล
               Container(
-                width: 322,
+                // width: 322,
                 child: Form(
                   key: _formKey,
                   child: Column(
@@ -137,10 +137,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           isDense: true,
                           contentPadding: const EdgeInsets.only(
-                              left: 20, top: 12, bottom: 12),
+                            left: 20,
+                            top: 12,
+                            bottom: 12,
+                          ),
                           hintText: 'หมายเลขโทรศัพท์',
                           hintStyle: const TextStyle(
-                              fontFamily: 'PSL114', fontSize: 19),
+                            fontFamily: 'PSL114',
+                            fontSize: 19,
+                          ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(11),
                             borderSide: const BorderSide(
@@ -214,13 +219,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
                       // ลืมรหัสผ่าน
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(248.5, 0, 0, 0),
+                        padding: const EdgeInsets.fromLTRB(262, 0, 0, 0),
                         child: TextButton(
                           onPressed: () {
                             // ทำเมื่อกดปุ่ม
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (BuildContext context) {
-                              return ForgotPassword();
+                              return const ForgotPassword();
                             }));
                           },
                           style: TextButton.styleFrom(
@@ -311,10 +316,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     // ปุ่มสร้างบัญชี
                     ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) {
-                            return CreateAccount();
-                          }));
+                          // ทำเมื่อกดปุ่ม
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CreateAccount()),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           fixedSize: const Size(150, 0),
