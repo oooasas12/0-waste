@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widget/my_textformfield.dart';
+
 class CreateAccount extends StatefulWidget {
   const CreateAccount({super.key});
 
@@ -21,14 +23,14 @@ class _CreateAccountState extends State<CreateAccount> {
 
   // ส่วนท้าย
   TextEditingController caNameText = TextEditingController();
-  TextEditingController caSirnameText = TextEditingController();
+  TextEditingController caSurnameText = TextEditingController();
   TextEditingController caTeleText = TextEditingController();
   TextEditingController caEmailText = TextEditingController();
   TextEditingController caCrePassText = TextEditingController();
   TextEditingController caConPassText = TextEditingController();
   // ตัวแปรรอรับข้อมูลจากตัวแปรที่รับข้อมูลจาก TextField
   String _caName = '';
-  String _caSirname = '';
+  String _caSurname = '';
   String _caTele = '';
   String _caEmail = '';
   String _caCrePass = '';
@@ -80,17 +82,13 @@ class _CreateAccountState extends State<CreateAccount> {
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Column(
-                          children: [
-                            // ชื่อหน้า
-                            Text(
-                              'สร้างบัญชี',
-                              style: TextStyle(
-                                fontFamily: 'PSL114',
-                                fontSize: 35,
-                              ),
-                            ),
-                          ],
+                        // ชื่อหน้า
+                        Text(
+                          'สร้างบัญชี',
+                          style: TextStyle(
+                            fontFamily: 'PSL114',
+                            fontSize: 35,
+                          ),
                         ),
                       ],
                     ),
@@ -181,9 +179,22 @@ class _CreateAccountState extends State<CreateAccount> {
                         const SizedBox(height: 10),
 
                         // ชื่อ นามสกุล
+                        // // ชื่อ
                         TextFormField(
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'กรุณากรอกชื่อ!';
+                            }
+
+                            return null;
+                          },
+                          controller: caNameText,
                           cursorColor: const Color.fromARGB(255, 140, 164, 59),
                           decoration: InputDecoration(
+                            errorStyle: const TextStyle(
+                              fontFamily: 'PSL114',
+                              fontSize: 16,
+                            ),
                             isDense: true,
                             contentPadding: const EdgeInsets.only(
                               left: 20,
@@ -196,6 +207,12 @@ class _CreateAccountState extends State<CreateAccount> {
                               fontSize: 19,
                               color: Colors.grey,
                             ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: const BorderSide(
+                                color: Color.fromARGB(255, 140, 164, 59),
+                              ),
+                            ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
                               borderSide: const BorderSide(
@@ -207,9 +224,22 @@ class _CreateAccountState extends State<CreateAccount> {
 
                         const SizedBox(height: 10), // ระยะห่าง
 
+                        // // นามสกุล
                         TextFormField(
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'กรุณากรอกนามสกุล!';
+                            }
+
+                            return null;
+                          },
+                          controller: caSurnameText,
                           cursorColor: const Color.fromARGB(255, 140, 164, 59),
                           decoration: InputDecoration(
+                            errorStyle: const TextStyle(
+                              fontFamily: 'PSL114',
+                              fontSize: 16,
+                            ),
                             isDense: true,
                             contentPadding: const EdgeInsets.only(
                               left: 20,
@@ -221,6 +251,12 @@ class _CreateAccountState extends State<CreateAccount> {
                               fontFamily: 'PSL114',
                               fontSize: 19,
                               color: Colors.grey,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: const BorderSide(
+                                color: Color.fromARGB(255, 140, 164, 59),
+                              ),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
@@ -235,8 +271,20 @@ class _CreateAccountState extends State<CreateAccount> {
 
                         // หมายเลขโทรศัพท์
                         TextFormField(
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'กรุณากรอกหมายเลขโทรศัพท์!';
+                            }
+
+                            return null;
+                          },
+                          controller: caTeleText,
                           cursorColor: const Color.fromARGB(255, 140, 164, 59),
                           decoration: InputDecoration(
+                            errorStyle: const TextStyle(
+                              fontFamily: 'PSL114',
+                              fontSize: 16,
+                            ),
                             isDense: true,
                             contentPadding: const EdgeInsets.only(
                               left: 20,
@@ -248,6 +296,12 @@ class _CreateAccountState extends State<CreateAccount> {
                               fontFamily: 'PSL114',
                               fontSize: 19,
                               color: Colors.grey,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: const BorderSide(
+                                color: Color.fromARGB(255, 140, 164, 59),
+                              ),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
@@ -262,8 +316,20 @@ class _CreateAccountState extends State<CreateAccount> {
 
                         // Email
                         TextFormField(
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'กรุณากรอก Email!';
+                            }
+
+                            return null;
+                          },
+                          controller: caEmailText,
                           cursorColor: const Color.fromARGB(255, 140, 164, 59),
                           decoration: InputDecoration(
+                            errorStyle: const TextStyle(
+                              fontFamily: 'PSL114',
+                              fontSize: 16,
+                            ),
                             isDense: true,
                             contentPadding: const EdgeInsets.only(
                               left: 20,
@@ -275,6 +341,12 @@ class _CreateAccountState extends State<CreateAccount> {
                               fontFamily: 'PSL114',
                               fontSize: 19,
                               color: Colors.grey,
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: const BorderSide(
+                                color: Color.fromARGB(255, 140, 164, 59),
+                              ),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
@@ -289,8 +361,21 @@ class _CreateAccountState extends State<CreateAccount> {
 
                         // กำหนดรหัสผ่าน
                         TextFormField(
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'กรุณากำหนดรหัสผ่าน!';
+                            }
+
+                            return null;
+                          },
+                          controller: caCrePassText,
+                          obscureText: _caCrePassObscureText,
                           cursorColor: const Color.fromARGB(255, 140, 164, 59),
                           decoration: InputDecoration(
+                            errorStyle: const TextStyle(
+                              fontFamily: 'PSL114',
+                              fontSize: 16,
+                            ),
                             isDense: true,
                             contentPadding: const EdgeInsets.only(
                               left: 20,
@@ -302,6 +387,27 @@ class _CreateAccountState extends State<CreateAccount> {
                               fontFamily: 'PSL114',
                               fontSize: 19,
                               color: Colors.grey,
+                            ),
+                            suffixIcon: GestureDetector(
+                              // ไอคอนซ่อนและเปิดเผยรหัสผ่าน
+                              onTap: () {
+                                setState(() {
+                                  _caCrePassObscureText =
+                                      !_caCrePassObscureText;
+                                });
+                              },
+                              child: Icon(
+                                _caCrePassObscureText
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: const BorderSide(
+                                color: Color.fromARGB(255, 140, 164, 59),
+                              ),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
@@ -316,8 +422,21 @@ class _CreateAccountState extends State<CreateAccount> {
 
                         // ยืนยันรหัสผ่าน
                         TextFormField(
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'กรุณายืนยันรหัสผ่าน!';
+                            }
+
+                            return null;
+                          },
+                          controller: caConPassText,
+                          obscureText: _caConPassObscureText,
                           cursorColor: const Color.fromARGB(255, 140, 164, 59),
                           decoration: InputDecoration(
+                            errorStyle: const TextStyle(
+                              fontFamily: 'PSL114',
+                              fontSize: 16,
+                            ),
                             isDense: true,
                             contentPadding: const EdgeInsets.only(
                               left: 20,
@@ -329,6 +448,27 @@ class _CreateAccountState extends State<CreateAccount> {
                               fontFamily: 'PSL114',
                               fontSize: 19,
                               color: Colors.grey,
+                            ),
+                            suffixIcon: GestureDetector(
+                              // ไอคอนซ่อนและเปิดเผยรหัสผ่าน
+                              onTap: () {
+                                setState(() {
+                                  _caConPassObscureText =
+                                      !_caConPassObscureText;
+                                });
+                              },
+                              child: Icon(
+                                _caConPassObscureText
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(11),
+                              borderSide: const BorderSide(
+                                color: Color.fromARGB(255, 140, 164, 59),
+                              ),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(11),
@@ -364,6 +504,18 @@ class _CreateAccountState extends State<CreateAccount> {
                           child: ElevatedButton(
                             onPressed: () {
                               // ทำเมื่อกดปุ่ม
+                              if (_formKeyCA.currentState!.validate()) {
+                                setState(() {
+                                  _caIntro = selectedIntro;
+                                  _caGroup = selectedGroup;
+                                  _caName = caNameText.text;
+                                  _caSurname = caSurnameText.text;
+                                  _caTele = caTeleText.text;
+                                  _caEmail = caEmailText.text;
+                                  _caCrePass = caCrePassText.text;
+                                  _caConPass = caConPassText.text;
+                                });
+                              }
                             },
                             style: ElevatedButton.styleFrom(
                               fixedSize: const Size(110, 0),
