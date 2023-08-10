@@ -7,9 +7,9 @@ class homeuserpages extends StatefulWidget {
 
 
 class _registerState extends State<homeuserpages> {
-  var a = 1807800010873;
+  var a = "1807800010873";
   var b = "Ploy Furesuwan";
-  var  c = 0980315126;
+  var c = "0980315126";
   var d = 0;
   var e = 0;
 
@@ -217,12 +217,12 @@ class _registerState extends State<homeuserpages> {
                           width: 200,
                           height: 62,
                           child: Center(
-                            child:Text(style: const TextStyle(
+                            child:Text(style:  TextStyle(
                             color: Colors.black,
                             fontFamily:'PSL116',
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
-                          ),'$a'),
+                          ),a),
                          ),
                         ),
 
@@ -246,12 +246,12 @@ class _registerState extends State<homeuserpages> {
 
                         child: Center(
                           child:Text(
-                            style: const TextStyle(
+                            style: TextStyle(
                             color: Colors.black,
                             fontFamily:'PSL116',
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
-                          ),'$c'),
+                          ),c),
                          ),
                         ),
 
@@ -287,7 +287,6 @@ class _registerState extends State<homeuserpages> {
                 ],
               ),
             ),
-
 
               Center(
                 child: Row(
