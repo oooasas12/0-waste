@@ -2,62 +2,56 @@ import 'package:flutter/material.dart';
 import 'package:waste/pages/recycling/volunteerpages.dart';
 //import 'widget/my_textformfield.dart';
 
-class recordwastepages extends StatefulWidget {
-  const recordwastepages({super.key});
+class greenhousepages extends StatefulWidget {
+  const greenhousepages({super.key});
 
   @override
-  State<recordwastepages> createState() => _CreateAccountState();
+  State<greenhousepages> createState() => _CreateAccountState();
 }
 
-class _CreateAccountState extends State<recordwastepages> {
+class _CreateAccountState extends State<greenhousepages> {
   // ตัวแปร
   final _formKeyCA = GlobalKey<FormState>();
   TextEditingController caYearText = TextEditingController();
   TextEditingController caMonText = TextEditingController();
-  TextEditingController caIncomeText = TextEditingController();
-  TextEditingController caWaText = TextEditingController();
+  TextEditingController caManagement1Text = TextEditingController();
+  TextEditingController caManagement2Text = TextEditingController();
   // ตัวแปรรอรับข้อมูลจากตัวแปรที่รับข้อมูลจาก TextField
   String _caYear = '';
   String _caMon = '';
-  String _caIncome = '';
-  String _caWa = '';
+  String _caManagement1  = '';
+  String _caManagement2  = '';
 
-  TextEditingController caIDText = TextEditingController();
-  TextEditingController caWeText = TextEditingController();
-  // ตัวแปรรอรับข้อมูลจากตัวแปรที่รับข้อมูลจาก TextField
-  String _caID = '';
-  String _caWe = '';
   // ตัวแปรข้อมูลที่ใช้กับ DropdownButton
-
-  String selectedYear = 'วัน'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
+  String selectedYear = 'รายปี'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
   List<String> dropdownYears = [
-    'วัน',
-    '1',
-    '2',
-    '3'
+    'รายปี',
+    '2000',
+    '2001',
+    '2002'
   ]; // รายการ DropdownMenuItem ของคำนำหน้าชื่อ
 
-  String selectedMon = 'เดือน'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
+  String selectedMon = 'รายเดือน'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
   List<String> dropdownMons = [
-    'เดือน',
+    'รายเดือน',
     'มกราคม',
     'กุมภาพันธ์',
     'มีนาคม'
   ];// รายการ DropdownMenuItem ของกลุ่ม
-  String selectedIncome = 'ปี'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
-  List<String> dropdownIncomes = [
-    'ปี',
+  String selectedManagement1 = 'การจัดการขยะ'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
+  List<String> dropdownManagement1 = [
+    'การจัดการขยะ',
+    '1000',
     '2000',
-    '2001',
-    '2002'
+    '3000'
   ];
-
-  String selectedW = 'ประเภทขยะ'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
-  List<String> dropdownW = [
-    'ประเภทขยะ',
-    'ขยะแห้ง',
-    '2001',
-    '2002'
+  // รายการ DropdownMenuItem ของกลุ่ม
+  String selectedManagement2 = 'การจัดการขยะ'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
+  List<String> dropdownManagement2 = [
+    'การจัดการขยะ',
+    '1000',
+    '2000',
+    '3000'
   ];
   // แสดงผลข้อมูล
   @override
@@ -126,7 +120,7 @@ class _CreateAccountState extends State<recordwastepages> {
                       Column(
                         children: [
                           Container(
-                            width: 285,
+                            width: 320,
                             height: 90,
                             decoration: BoxDecoration(
                               color: Color(0xFFB3C469),
@@ -140,7 +134,7 @@ class _CreateAccountState extends State<recordwastepages> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                               children: [
                                 Image.asset(
-                                  'assets/re3.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
+                                  'assets/rep4.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
                                   width: 80,
                                   height: 80,
                                 ),
@@ -155,9 +149,9 @@ class _CreateAccountState extends State<recordwastepages> {
                                     children: [
 
                                       TextSpan(
-                                        text: 'บันทึกรายได้ขายขยะ', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
+                                        text: 'การปล่อยก๊าซเรือนกระจก', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
                                         style: TextStyle(
-                                          fontSize: 35,
+                                          fontSize: 33,
                                         ),
                                       ),
                                     ],
@@ -172,8 +166,8 @@ class _CreateAccountState extends State<recordwastepages> {
                   ),
                   const SizedBox(height: 20),
                   Container(
-                    width: 500,
-                    height: 240,
+                    width: 400,
+                    height: 300,
 
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -182,7 +176,7 @@ class _CreateAccountState extends State<recordwastepages> {
                         Row(
                           children: [
                             Container(
-                              width: 70,
+                              width: 120,
                               height: 40,
 
                               child: DropdownButtonFormField<String>(
@@ -226,62 +220,17 @@ class _CreateAccountState extends State<recordwastepages> {
                               height: 10,
                             ),
                             Container(
-                              width: 110,
+                              width: 180,
                               height: 40,
                               // กลุ่ม
                               child: DropdownButtonFormField<String>(
-                                value: selectedMon,
+                                value: selectedManagement1,
                                 onChanged: (newValue) {
                                   setState(() {
-                                    selectedMon = newValue!;
+                                    selectedManagement1 = newValue!;
                                   });
                                 },
-                                items: dropdownMons
-                                    .map<DropdownMenuItem<String>>((String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Text(
-                                      value,
-                                      style: const TextStyle(
-                                        fontFamily: 'PSL114',
-                                        fontSize: 24,
-                                      ),
-                                    ),
-                                  );
-                                }).toList(),
-                                decoration: InputDecoration(
-                                  isDense: true,
-                                  contentPadding: const EdgeInsets.only(
-                                    left: 20,
-                                    top: 8,
-                                    bottom: 8,
-
-                                  ),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(11),
-                                    borderSide: const BorderSide(
-                                      color: Color.fromARGB(255, 48, 39, 20),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              width: 10,
-                              height: 10,
-                            ),
-                            Container(
-                              width: 110,
-                              height: 40,
-                              // กลุ่ม
-                              child: DropdownButtonFormField<String>(
-                                value: selectedMon,
-                                onChanged: (newValue) {
-                                  setState(() {
-                                    selectedMon = newValue!;
-                                  });
-                                },
-                                items: dropdownMons
+                                items: dropdownManagement1
                                     .map<DropdownMenuItem<String>>((String value) {
                                   return DropdownMenuItem<String>(
                                     value: value,
@@ -313,63 +262,43 @@ class _CreateAccountState extends State<recordwastepages> {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 20),
+                        Container(
+                          height: 50,
+                        ),
                         // Row 2
                         Row(
                           children: [
                             Container(
-
-                              child: Row(
-                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
-                                children: [
-                                  Image.asset(
-                                    'assets/re11.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 60,
-                                    height: 60,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 10,
-                              height: 10,
-                            ),
-                            Container(
-                              width: 240,
+                              width: 120,
                               height: 40,
-                              // กลุ่ม
-                              child: TextFormField(
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return 'กรุณากรอกชื่อ!';
-                                  }
 
-                                  return null;
+                              child: DropdownButtonFormField<String>(
+                                value: selectedMon,
+                                onChanged: (newValue) {
+                                  setState(() {
+                                    selectedMon = newValue!;
+                                  });
                                 },
-                                controller: caIDText,
-                                cursorColor: const Color.fromARGB(255, 140, 164, 59),
+                                items: dropdownMons
+                                    .map<DropdownMenuItem<String>>((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(
+                                      value,
+                                      style: const TextStyle(
+                                        fontFamily: 'PSL114',
+                                        fontSize: 24,
+                                      ),
+                                    ),
+                                  );
+                                }).toList(),
                                 decoration: InputDecoration(
-                                  errorStyle: const TextStyle(
-                                    fontFamily: 'PSL114',
-                                    fontSize: 16,
-                                  ),
                                   isDense: true,
                                   contentPadding: const EdgeInsets.only(
                                     left: 20,
                                     top: 8,
                                     bottom: 8,
-                                  ),
-                                  hintText: 'รหัสผู้รีไซเคิลขยะ',
-                                  hintStyle: const TextStyle(
-                                    fontFamily: 'PSL114',
-                                    fontSize: 19,
-                                    color: Colors.grey,
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(11),
-                                    borderSide: const BorderSide(
-                                      color: Color.fromARGB(255, 140, 164, 59),
-                                    ),
                                   ),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(11),
@@ -380,40 +309,23 @@ class _CreateAccountState extends State<recordwastepages> {
                                 ),
                               ),
                             ),
-                          ],
-                        ),
 
-                        Row(
-                          children: [
-                            Container(
-
-                              child: Row(
-                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
-                                children: [
-                                  Image.asset(
-                                    'assets/re2.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 60,
-                                    height: 60,
-                                  ),
-                                ],
-                              ),
-                            ),
                             Container(
                               width: 10,
                               height: 10,
                             ),
                             Container(
-                              width: 240,
+                              width: 180,
                               height: 40,
                               // กลุ่ม
                               child: DropdownButtonFormField<String>(
-                                value: selectedW,
+                                value: selectedManagement2,
                                 onChanged: (newValue) {
                                   setState(() {
-                                    selectedW = newValue!;
+                                    selectedManagement2 = newValue!;
                                   });
                                 },
-                                items: dropdownW
+                                items: dropdownManagement2
                                     .map<DropdownMenuItem<String>>((String value) {
                                   return DropdownMenuItem<String>(
                                     value: value,
@@ -433,73 +345,6 @@ class _CreateAccountState extends State<recordwastepages> {
                                     top: 8,
                                     bottom: 8,
 
-                                  ),
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(11),
-                                    borderSide: const BorderSide(
-                                      color: Color.fromARGB(255, 48, 39, 20),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-
-                              child: Row(
-                                //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
-                                children: [
-                                  Image.asset(
-                                    'assets/re8.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
-                                    width: 60,
-                                    height: 60,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 10,
-                              height: 10,
-                            ),
-                            Container(
-                              width: 240,
-                              height: 40,
-                              // กลุ่ม
-                              child: TextFormField(
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return 'กรุณากรอกชื่อ!';
-                                  }
-
-                                  return null;
-                                },
-                                controller: caWeText,
-                                cursorColor: const Color.fromARGB(255, 140, 164, 59),
-                                decoration: InputDecoration(
-                                  errorStyle: const TextStyle(
-                                    fontFamily: 'PSL114',
-                                    fontSize: 16,
-                                  ),
-                                  isDense: true,
-                                  contentPadding: const EdgeInsets.only(
-                                    left: 20,
-                                    top: 8,
-                                    bottom: 8,
-                                  ),
-                                  hintText: 'น้ำหนักขยะ',
-                                  hintStyle: const TextStyle(
-                                    fontFamily: 'PSL114',
-                                    fontSize: 19,
-                                    color: Colors.grey,
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(11),
-                                    borderSide: const BorderSide(
-                                      color: Color.fromARGB(255, 140, 164, 59),
-                                    ),
                                   ),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(11),
@@ -516,80 +361,8 @@ class _CreateAccountState extends State<recordwastepages> {
                     ),
                   ),
                   Container(
-                    height: 50,
+                    height: 10,
                   ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 90),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            // ทำเมื่อกดปุ่ม
-                            if (_formKeyCA.currentState!.validate()) {
-                              setState(() {
-                                _caYear = selectedYear;
-                                _caMon = selectedMon;
-                                _caIncome = selectedIncome;
-                                _caWa = selectedW;
-                                _caID = caIDText.text;
-                                _caWe = caWeText.text;
-                              });
-                            }
-                          },
-                          style: ElevatedButton.styleFrom(
-                            fixedSize: const Size(100, 0),
-                            backgroundColor:
-                            const Color.fromARGB(50, 255, 255, 20),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                          ),
-                          child: const Text(
-                            'ยกเลิก',
-                            style:
-                            TextStyle(
-                              fontFamily: 'PSL114',
-                              fontSize: 24,
-                              color: Colors.black,),
-                          ),
-                        ),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            // ทำเมื่อกดปุ่ม
-                            if (_formKeyCA.currentState!.validate()) {
-                              setState(() {
-                                _caYear = selectedYear;
-                                _caMon = selectedMon;
-                                _caIncome = selectedIncome;
-                              });
-                            }
-                          },
-                          style: ElevatedButton.styleFrom(
-                            fixedSize: const Size(100, 0),
-                            backgroundColor:
-                            const Color.fromARGB(50, 255, 255, 20),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                          ),
-                          child: const Text(
-                            'บันทึก',
-                            style: TextStyle(
-                              fontFamily: 'PSL114',
-                              fontSize: 24,
-                              color: Colors.black,
-                            ),
-
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-
 
                   Center(
                     child: Row(

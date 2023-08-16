@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:waste/pages/recyclingpages.dart';
+import 'package:waste/pages/reportpages.dart';
 import 'package:waste/pages/wasteherepages.dart';
 import 'package:waste/pages/incpages.dart';
 
@@ -324,7 +325,7 @@ class _registerState extends State<mainpages> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return mainpages();
+                                    return reportpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
