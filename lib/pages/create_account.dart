@@ -97,174 +97,215 @@ class _CreateAccountState extends State<CreateAccount> {
 
                   // ส่วนรายละเอียด
                   Container(
+                    width: 400,
                     child: Column(
                       children: [
                         // คำนำหน้าและกลุ่ม
-                        // คำนำหน้า
-                        DropdownButtonFormField<String>(
-                          value: selectedIntro,
-                          onChanged: (newValue) {
-                            setState(() {
-                              selectedIntro = newValue!;
-                            });
-                          },
-                          items: dropdownIntros
-                              .map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(
-                                value,
-                                style: const TextStyle(
-                                  fontFamily: 'PSL114',
-                                  fontSize: 19,
+                        Row(
+                          children: [
+                            Container(
+                              width: 163,
+                              height: 40,
+
+                              // คำนำหน้า
+                              child: DropdownButtonFormField<String>(
+                                value: selectedIntro,
+                                onChanged: (newValue) {
+                                  setState(() {
+                                    selectedIntro = newValue!;
+                                  });
+                                },
+                                items: dropdownIntros
+                                    .map<DropdownMenuItem<String>>(
+                                        (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(
+                                      value,
+                                      style: const TextStyle(
+                                        fontFamily: 'PSL114',
+                                        fontSize: 19,
+                                      ),
+                                    ),
+                                  );
+                                }).toList(),
+                                decoration: InputDecoration(
+                                  isDense: true,
+                                  contentPadding: const EdgeInsets.only(
+                                    left: 20,
+                                    top: 8,
+                                    bottom: 8,
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(11),
+                                    borderSide: const BorderSide(
+                                      color: Color.fromARGB(255, 48, 39, 20),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            );
-                          }).toList(),
-                          decoration: InputDecoration(
-                            isDense: true,
-                            contentPadding: const EdgeInsets.only(
-                              left: 20,
-                              top: 8,
-                              bottom: 8,
                             ),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(11),
-                              borderSide: const BorderSide(
-                                color: Color.fromARGB(255, 48, 39, 20),
-                              ),
+
+                            // ช่องว่างขั้นในแถวเดียวกัน
+                            Container(
+                              width: 5,
+                              height: 5,
                             ),
-                          ),
-                        ),
 
-                        const SizedBox(height: 10),
+                            Container(
+                              width: 163,
+                              height: 40,
 
-                        // กลุ่ม
-                        DropdownButtonFormField<String>(
-                          value: selectedGroup,
-                          onChanged: (newValue) {
-                            setState(() {
-                              selectedGroup = newValue!;
-                            });
-                          },
-                          items: dropdownGroups
-                              .map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(
-                                value,
-                                style: const TextStyle(
-                                  fontFamily: 'PSL114',
-                                  fontSize: 19,
+                              // กลุ่ม
+                              child: DropdownButtonFormField<String>(
+                                value: selectedGroup,
+                                onChanged: (newValue) {
+                                  setState(() {
+                                    selectedGroup = newValue!;
+                                  });
+                                },
+                                items: dropdownGroups
+                                    .map<DropdownMenuItem<String>>(
+                                        (String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(
+                                      value,
+                                      style: const TextStyle(
+                                        fontFamily: 'PSL114',
+                                        fontSize: 19,
+                                      ),
+                                    ),
+                                  );
+                                }).toList(),
+                                decoration: InputDecoration(
+                                  isDense: true,
+                                  contentPadding: const EdgeInsets.only(
+                                    left: 20,
+                                    top: 8,
+                                    bottom: 8,
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(11),
+                                    borderSide: const BorderSide(
+                                      color: Color.fromARGB(255, 48, 39, 20),
+                                    ),
+                                  ),
                                 ),
                               ),
-                            );
-                          }).toList(),
-                          decoration: InputDecoration(
-                            isDense: true,
-                            contentPadding: const EdgeInsets.only(
-                              left: 20,
-                              top: 8,
-                              bottom: 8,
                             ),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(11),
-                              borderSide: const BorderSide(
-                                color: Color.fromARGB(255, 48, 39, 20),
-                              ),
-                            ),
-                          ),
+                          ],
                         ),
 
                         const SizedBox(height: 10),
 
                         // ชื่อ นามสกุล
-                        // // ชื่อ
-                        TextFormField(
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'กรุณากรอกชื่อ!';
-                            }
+                        Row(
+                          children: [
+                            Container(
+                              width: 163,
+                              height: 40,
 
-                            return null;
-                          },
-                          controller: caNameText,
-                          cursorColor: const Color.fromARGB(255, 140, 164, 59),
-                          decoration: InputDecoration(
-                            errorStyle: const TextStyle(
-                              fontFamily: 'PSL114',
-                              fontSize: 16,
-                            ),
-                            isDense: true,
-                            contentPadding: const EdgeInsets.only(
-                              left: 20,
-                              top: 8,
-                              bottom: 8,
-                            ),
-                            hintText: 'ชื่อ',
-                            hintStyle: const TextStyle(
-                              fontFamily: 'PSL114',
-                              fontSize: 19,
-                              color: Colors.grey,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(11),
-                              borderSide: const BorderSide(
-                                color: Color.fromARGB(255, 140, 164, 59),
+                              // ชื่อ
+                              child: TextFormField(
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return 'กรุณากรอกชื่อ!';
+                                  }
+
+                                  return null;
+                                },
+                                controller: caNameText,
+                                cursorColor:
+                                    const Color.fromARGB(255, 140, 164, 59),
+                                decoration: InputDecoration(
+                                  errorStyle: const TextStyle(
+                                    fontFamily: 'PSL114',
+                                    fontSize: 16,
+                                  ),
+                                  isDense: true,
+                                  contentPadding: const EdgeInsets.only(
+                                    left: 20,
+                                    top: 8,
+                                    bottom: 8,
+                                  ),
+                                  hintText: 'ชื่อ',
+                                  hintStyle: const TextStyle(
+                                    fontFamily: 'PSL114',
+                                    fontSize: 19,
+                                    color: Colors.grey,
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(11),
+                                    borderSide: const BorderSide(
+                                      color: Color.fromARGB(255, 140, 164, 59),
+                                    ),
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(11),
+                                    borderSide: const BorderSide(
+                                      color: Color.fromARGB(255, 48, 39, 20),
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(11),
-                              borderSide: const BorderSide(
-                                color: Color.fromARGB(255, 48, 39, 20),
+
+                            // ช่องว่างขั้นในแถวเดียวกัน
+                            Container(
+                              width: 5,
+                              height: 5,
+                            ),
+
+                            Container(
+                              width: 163,
+                              height: 40,
+
+                              // นามสกุล
+                              child: TextFormField(
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return 'กรุณากรอกนามสกุล!';
+                                  }
+
+                                  return null;
+                                },
+                                controller: caSurnameText,
+                                cursorColor:
+                                    const Color.fromARGB(255, 140, 164, 59),
+                                decoration: InputDecoration(
+                                  errorStyle: const TextStyle(
+                                    fontFamily: 'PSL114',
+                                    fontSize: 16,
+                                  ),
+                                  isDense: true,
+                                  contentPadding: const EdgeInsets.only(
+                                    left: 20,
+                                    top: 8,
+                                    bottom: 8,
+                                  ),
+                                  hintText: 'นามสกุล',
+                                  hintStyle: const TextStyle(
+                                    fontFamily: 'PSL114',
+                                    fontSize: 19,
+                                    color: Colors.grey,
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(11),
+                                    borderSide: const BorderSide(
+                                      color: Color.fromARGB(255, 140, 164, 59),
+                                    ),
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(11),
+                                    borderSide: const BorderSide(
+                                      color: Color.fromARGB(255, 48, 39, 20),
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ),
-
-                        const SizedBox(height: 10), // ระยะห่าง
-
-                        // // นามสกุล
-                        TextFormField(
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'กรุณากรอกนามสกุล!';
-                            }
-
-                            return null;
-                          },
-                          controller: caSurnameText,
-                          cursorColor: const Color.fromARGB(255, 140, 164, 59),
-                          decoration: InputDecoration(
-                            errorStyle: const TextStyle(
-                              fontFamily: 'PSL114',
-                              fontSize: 16,
-                            ),
-                            isDense: true,
-                            contentPadding: const EdgeInsets.only(
-                              left: 20,
-                              top: 8,
-                              bottom: 8,
-                            ),
-                            hintText: 'นามสกุล',
-                            hintStyle: const TextStyle(
-                              fontFamily: 'PSL114',
-                              fontSize: 19,
-                              color: Colors.grey,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(11),
-                              borderSide: const BorderSide(
-                                color: Color.fromARGB(255, 140, 164, 59),
-                              ),
-                            ),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(11),
-                              borderSide: const BorderSide(
-                                color: Color.fromARGB(255, 48, 39, 20),
-                              ),
-                            ),
-                          ),
+                          ],
                         ),
 
                         const SizedBox(height: 10), // ระยะห่าง

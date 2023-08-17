@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:waste/pages/mainpages.dart';
 
+import 'package:waste/pages/organicpages/1_vermicompost.dart';
+import 'package:waste/pages/organicpages/2_non-turnover_compost.dart';
+import 'package:waste/pages/organicpages/3_biogas.dart';
+import 'package:waste/pages/organicpages/4_organic_management_station.dart';
+
 class incpages extends StatefulWidget {
   @override
   _registerState createState() => _registerState();
@@ -84,7 +89,7 @@ class _registerState extends State<incpages> {
                                     elevation:
                                         0, // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                                     minimumSize:
-                                    const Size(10, 10), // กำหนดขนาดของปุ่ม
+                                        const Size(10, 10), // กำหนดขนาดของปุ่ม
                                     padding: const EdgeInsets.all(
                                         0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                                     tapTargetSize: MaterialTapTargetSize
@@ -146,14 +151,14 @@ class _registerState extends State<incpages> {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
                                             builder: (BuildContext context) {
-                                      return mainpages();
+                                      return const Vermicompost();
                                     }));
                                   },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: const Color(
                                         0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
                                     minimumSize:
-                                    const Size(10, 10), // กำหนดขนาดของปุ่ม
+                                        const Size(10, 10), // กำหนดขนาดของปุ่ม
                                     padding: const EdgeInsets.all(
                                         0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                                     tapTargetSize: MaterialTapTargetSize
@@ -218,14 +223,14 @@ class _registerState extends State<incpages> {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
                                             builder: (BuildContext context) {
-                                      return mainpages();
+                                      return const NonTurnoverCompost();
                                     }));
                                   },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: const Color(
                                         0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
                                     minimumSize:
-                                    const Size(10, 10), // กำหนดขนาดของปุ่ม
+                                        const Size(10, 10), // กำหนดขนาดของปุ่ม
                                     padding: const EdgeInsets.all(
                                         0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                                     tapTargetSize: MaterialTapTargetSize
@@ -290,14 +295,14 @@ class _registerState extends State<incpages> {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
                                             builder: (BuildContext context) {
-                                      return mainpages();
+                                      return const Biogas();
                                     }));
                                   },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: const Color(
                                         0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
                                     minimumSize:
-                                    const Size(10, 10), // กำหนดขนาดของปุ่ม
+                                        const Size(10, 10), // กำหนดขนาดของปุ่ม
                                     padding: const EdgeInsets.all(
                                         0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                                     tapTargetSize: MaterialTapTargetSize
@@ -362,14 +367,14 @@ class _registerState extends State<incpages> {
                                     Navigator.of(context).push(
                                         MaterialPageRoute(
                                             builder: (BuildContext context) {
-                                      return mainpages();
+                                      return const OrganicManagementStation();
                                     }));
                                   },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: const Color(
                                         0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
                                     minimumSize:
-                                    const Size(10, 10), // กำหนดขนาดของปุ่ม
+                                        const Size(10, 10), // กำหนดขนาดของปุ่ม
                                     padding: const EdgeInsets.all(
                                         0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                                     tapTargetSize: MaterialTapTargetSize
@@ -426,6 +431,33 @@ class _registerState extends State<incpages> {
                                     ),
                                   ),
                                 ),
+
+                                const SizedBox(height: 10), // ระยะห่าง
+
+                                // ป่มย้อนกลับ
+                                Padding(
+                                  padding: EdgeInsets.only(left: 220),
+                                  child: ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                      fixedSize: const Size(110, 0),
+                                      backgroundColor:
+                                          const Color.fromARGB(255, 48, 39, 20),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(18),
+                                      ),
+                                    ),
+                                    child: const Text(
+                                      'ย้อนกลับ',
+                                      style: TextStyle(
+                                        fontFamily: 'PSL114',
+                                        fontSize: 22,
+                                      ),
+                                    ),
+                                  ),
+                                )
                               ],
                             )
                           ])
