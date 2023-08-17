@@ -14,12 +14,12 @@ class _CreateAccountState extends State<recordwastepages> {
   final _formKeyCA = GlobalKey<FormState>();
   TextEditingController caYearText = TextEditingController();
   TextEditingController caMonText = TextEditingController();
-  TextEditingController caIncomeText = TextEditingController();
+  TextEditingController caDayText = TextEditingController();
   TextEditingController caWaText = TextEditingController();
   // ตัวแปรรอรับข้อมูลจากตัวแปรที่รับข้อมูลจาก TextField
   String _caYear = '';
   String _caMon = '';
-  String _caIncome = '';
+  String _caDay = '';
   String _caWa = '';
 
   TextEditingController caIDText = TextEditingController();
@@ -29,8 +29,8 @@ class _CreateAccountState extends State<recordwastepages> {
   String _caWe = '';
   // ตัวแปรข้อมูลที่ใช้กับ DropdownButton
 
-  String selectedYear = 'วัน'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
-  List<String> dropdownYears = [
+  String selectedDay = 'วัน'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
+  List<String> dropdownDays = [
     'วัน',
     '1',
     '2',
@@ -44,8 +44,8 @@ class _CreateAccountState extends State<recordwastepages> {
     'กุมภาพันธ์',
     'มีนาคม'
   ];// รายการ DropdownMenuItem ของกลุ่ม
-  String selectedIncome = 'ปี'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
-  List<String> dropdownIncomes = [
+  String selectedYear = 'ปี'; // ตั้งค่าค่าที่เลือกในรายการเริ่มต้น
+  List<String> dropdownYears = [
     'ปี',
     '2000',
     '2001',
@@ -186,13 +186,13 @@ class _CreateAccountState extends State<recordwastepages> {
                               height: 40,
 
                               child: DropdownButtonFormField<String>(
-                                value: selectedYear,
+                                value: selectedDay,
                                 onChanged: (newValue) {
                                   setState(() {
-                                    selectedYear = newValue!;
+                                    selectedDay = newValue!;
                                   });
                                 },
-                                items: dropdownYears
+                                items: dropdownDays
                                     .map<DropdownMenuItem<String>>((String value) {
                                   return DropdownMenuItem<String>(
                                     value: value,
@@ -275,13 +275,13 @@ class _CreateAccountState extends State<recordwastepages> {
                               height: 40,
                               // กลุ่ม
                               child: DropdownButtonFormField<String>(
-                                value: selectedMon,
+                                value: selectedYear,
                                 onChanged: (newValue) {
                                   setState(() {
-                                    selectedMon = newValue!;
+                                    selectedYear = newValue!;
                                   });
                                 },
-                                items: dropdownMons
+                                items: dropdownYears
                                     .map<DropdownMenuItem<String>>((String value) {
                                   return DropdownMenuItem<String>(
                                     value: value,
@@ -529,7 +529,7 @@ class _CreateAccountState extends State<recordwastepages> {
                               setState(() {
                                 _caYear = selectedYear;
                                 _caMon = selectedMon;
-                                _caIncome = selectedIncome;
+                                _caDay = selectedDay;
                                 _caWa = selectedW;
                                 _caID = caIDText.text;
                                 _caWe = caWeText.text;
@@ -564,7 +564,10 @@ class _CreateAccountState extends State<recordwastepages> {
                               setState(() {
                                 _caYear = selectedYear;
                                 _caMon = selectedMon;
-                                _caIncome = selectedIncome;
+                                _caDay = selectedDay;
+                                _caWa = selectedW;
+                                _caID = caIDText.text;
+                                _caWe = caWeText.text;
                               });
                             }
                           },
