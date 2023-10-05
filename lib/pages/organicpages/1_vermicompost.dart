@@ -8,6 +8,63 @@ class Vermicompost extends StatefulWidget {
 }
 
 class _VermicompostState extends State<Vermicompost> {
+  // ตัวแปร
+  final _formKeyInc1 = GlobalKey<FormState>();
+
+  // รับค่าจาก TextField
+  TextEditingController inc1YearText = TextEditingController(); // ปี
+  TextEditingController inc1MonthText = TextEditingController(); // เดือน
+  TextEditingController inc1TrashSourceText =
+      TextEditingController(); // แหล่งที่มาขยะ
+  TextEditingController inc1TrashSourceNameText =
+      TextEditingController(); // ชื่อแหล่งที่มาขยะ
+  TextEditingController inc1TypeText =
+      TextEditingController(); // ประเภทขยะอินทรีย์
+  TextEditingController inc1IncKiloText =
+      TextEditingController(); // ปริมาณขยะอินทรีย์ (กก.)
+  TextEditingController inc1CompostText = TextEditingController(); // ปุ๋ย
+  TextEditingController inc1CompostKiloText =
+      TextEditingController(); // ปริมาณปุ๋ย (กก.)
+  TextEditingController inc1CompostSaleIncomeText =
+      TextEditingController(); // รายได้ขายปุ๋ย (บาท)
+
+  // ตัวแปรรอรับข้อมูลจากตัวแปรที่รับข้อมูลจาก TextField
+  String _inc1Year = '';
+  String _inc1Month = '';
+  String _inc1TrashSource = '';
+  String _inc1TrashSourceName = '';
+  String _inc1Type = '';
+  String _inc1IncKilo = '';
+  String _inc1Compost = '';
+  String _inc1CompostKilo = '';
+  String _inc1CompostSaleIncome = '';
+
+  // ตัวแปรที่ใช้กับ DropdownButton
+  // ปี
+  String selectedInc1Year = 'Year 1';
+  List<String> dropdownInc1Years = ['Year 2', 'Year 3'];
+
+  // เดือน
+  String selectedInc1Month = 'Month 1';
+  List<String> dropdownInc1Months = ['Month 2', 'Month 3'];
+
+  // แหล่งที่มาขยะ
+  String selectedInc1TrashSource = 'TrashSource 1';
+  List<String> dropdownInc1TrashSources = ['TrashSource 2', 'TrashSource 3'];
+
+  // ประเภทขยะอินทร๊ย์
+  String selectedInc1Type = 'Type 1';
+  List<String> dropdownInc1Types = ['Type 2', 'Type 3'];
+
+  // ปุ๋ย
+  String selectedInc1compost = 'compost 1';
+  List<String> dropdownInc1composts = ['compost 2', 'compost 3'];
+
+  // ปริมาณปุ๋ย
+  String selectedInc1CompostKilo = 'CompostKilo 1';
+  List<String> dropdownInc1CompostKilos = ['CompostKilo 2', 'CompostKilo 3'];
+
+  // แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,7 +131,7 @@ class _VermicompostState extends State<Vermicompost> {
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(20),
-                    color: const Color.fromARGB(255, 140, 164, 59), 
+                    color: const Color.fromARGB(255, 140, 164, 59),
                   ),
                   child: Row(
                     children: [
@@ -84,7 +141,7 @@ class _VermicompostState extends State<Vermicompost> {
                           scale: 1.2,
                           child: Image.asset(
                             'assets/in1.png',
-                            width: 100,
+                            width: 75,
                           ),
                         ),
                       ),
@@ -92,6 +149,75 @@ class _VermicompostState extends State<Vermicompost> {
                         'ปุ๋ยหมักมูลไส้เดือน',
                         style: TextStyle(fontFamily: 'PSL114', fontSize: 45),
                       )
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 10), // ช่องว่าง
+
+                // ส่วนรายละเอียด
+                Container(
+                  width: 400,
+                  child: Column(
+                    children: [
+                      // ปี เดือน
+                      Row(
+                        children: [
+                          Container(
+                            width: 128,
+                            height: 40,
+
+                            // ปี
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          // ช่องว่างขั้นในแถวเดียวกัน
+                          Container(
+                            width: 10,
+                            height: 10,
+                          ),
+
+                          Container(
+                            width: 188,
+                            height: 40,
+
+                            // เดือน
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 10), // ระยะห่าง
+
+                      // แหล่งที่มาขยะ
+
+                      // ชื่อแหล่งที่มาขยะ
+
+                      // ประเภทขยะอินทรีย์
+
+                      // ปริมาณขยะอินทรีย์ (กก.)
+
+                      // ปุ๋ยและปริมาณปุ๋ย (กก.)
+
+                      // รายได้ขายปุ๋ย (บาท)
                     ],
                   ),
                 ),
