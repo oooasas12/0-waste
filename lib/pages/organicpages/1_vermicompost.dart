@@ -163,11 +163,10 @@ class _VermicompostState extends State<Vermicompost> {
                       // ปี เดือน
                       Row(
                         children: [
+                          // ปี
                           Container(
                             width: 128,
                             height: 40,
-
-                            // ปี
                             child: TextFormField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(
@@ -186,11 +185,10 @@ class _VermicompostState extends State<Vermicompost> {
                             height: 10,
                           ),
 
+                          // เดือน
                           Container(
                             width: 188,
                             height: 40,
-
-                            // เดือน
                             child: TextFormField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(
@@ -208,16 +206,326 @@ class _VermicompostState extends State<Vermicompost> {
                       const SizedBox(height: 10), // ระยะห่าง
 
                       // แหล่งที่มาขยะ
+                      Row(
+                        children: [
+                          // ไอคอนรูปบ้าน
+                          Container(
+                            width: 64,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          // ช่องว่างขั้นในแถวเดียวกัน
+                          Container(
+                            width: 10,
+                            height: 40,
+                          ),
+
+                          // แหล่งที่มาขยะ
+                          Container(
+                            width: 255,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 10), // ระยะห่าง
 
                       // ชื่อแหล่งที่มาขยะ
+                      Row(
+                        children: [
+                          // ช่องว่างขั้นในแถวเดียวกัน
+                          Container(
+                            width: 74,
+                            height: 40,
+                          ),
+
+                          // ชื่อแหล่งที่มาขยะ
+                          Container(
+                            width: 255,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 10), // ระยะห่าง
 
                       // ประเภทขยะอินทรีย์
+                      Row(
+                        children: [
+                          // ไอคอนเศษอาหาร
+                          Container(
+                            width: 64,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          // ช่องว่างขั้นในแถวเดียวกัน
+                          Container(
+                            width: 10,
+                            height: 40,
+                          ),
+
+                          // ประเภทขยะอินทรีย์
+                          Container(
+                            width: 255,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 10), // ระยะห่าง
 
                       // ปริมาณขยะอินทรีย์ (กก.)
+                      Row(
+                        children: [
+                          // ช่องว่างขั้นในแถวเดียวกัน
+                          Container(
+                            width: 74,
+                            height: 40,
+                          ),
+
+                          //  ปริมาณขยะอินทรีย์ (กก.)
+                          Container(
+                            width: 255,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 10), // ระยะห่าง
 
                       // ปุ๋ยและปริมาณปุ๋ย (กก.)
+                      Row(
+                        children: [
+                          // ไอคอนกระสอบปุ๋ย
+                          Container(
+                            width: 64,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          // ช่องว่างขั้นในแถวเดียวกัน
+                          Container(
+                            width: 10,
+                            height: 10,
+                          ),
+
+                          // ปุ๋ย
+                          Container(
+                            width: 98,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          // ช่องว่างขั้นในแถวเดียวกัน
+                          Container(
+                            width: 10,
+                            height: 40,
+                          ),
+
+                          // ปริมาณปุ๋ย (กก.)
+                          Container(
+                            width: 148,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 10), // ระยะห่าง
 
                       // รายได้ขายปุ๋ย (บาท)
+                      Row(
+                        children: [
+                          // ช่องว่างขั้นในแถวเดียวกัน
+                          Container(
+                            width: 74,
+                            height: 40,
+                          ),
+
+                          // รายได้ขายปุ๋ย (บาท)
+                          Container(
+                            width: 255,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 20), // ระยะห่าง
+
+                      // ปุ่มยกเลิก และ บันทึก
+                      Row(
+                        children: [
+                          // ช่องว่างก่อนหน้าปุ่ม
+                          Container(
+                            width: 74,
+                            height: 40,
+                          ),
+
+                          // ปุ่มยกเลิก
+                          Container(
+                            width: 127,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          // ระยะห่างขั้นในบรรทัดเดียวกัน
+                          Container(
+                            width: 1,
+                            height: 1,
+                          ),
+
+                          // ปุ่มยกเลิก
+                          Container(
+                            width: 127,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 10), // ระยะห่าง
+
+                      // ปุ่มย้อนกลับ
+                      Row(
+                        children: [
+                          // ช่องว่างก่อนหน้าปุ่ม
+                          Container(
+                            width: 202,
+                            height: 40,
+                          ),
+
+                          // ปุ่มย้อนกลับ
+                          Container(
+                            width: 127,
+                            height: 40,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(11),
+                                  borderSide: const BorderSide(
+                                    color: Color.fromARGB(255, 48, 39, 20),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
