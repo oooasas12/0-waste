@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:waste/pages/recycling/voluntter/recordincomepages.dart';
-import 'package:waste/pages/recycling/voluntter/recordwastepages.dart';
-import 'package:waste/pages/recyclingpages.dart';
+import 'package:waste/pages/mainpages.dart';
+import 'package:waste/pages/report/greenhousepages.dart';
+import 'package:waste/pages/report/incomepages.dart';
+import 'package:waste/pages/report/lowgreenhousepages.dart';
 
 
-class volunteerpages extends StatefulWidget {
+class reportpages extends StatefulWidget {
   @override
   _registerState createState() => _registerState();
 }
 
-class _registerState extends State<volunteerpages> {
+class _registerState extends State<reportpages> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/bg1.png'),
               fit: BoxFit.cover,
@@ -25,12 +26,12 @@ class _registerState extends State<volunteerpages> {
             padding: const EdgeInsets.all(30.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children:[
+              children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Transform.translate(
-                      offset: Offset(-5, -2),
+                      offset: const Offset(-5, -2),
                       child: Transform.scale(
                         scale: 1.4,
                         child: Image.asset(
@@ -66,8 +67,7 @@ class _registerState extends State<volunteerpages> {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
-
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -78,7 +78,7 @@ class _registerState extends State<volunteerpages> {
                           width: 220,
                           height: 90,
                           decoration: BoxDecoration(
-                            color: Color(0xFFB3C469),
+                            color: const Color(0xFFB3C469),
                             borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                             border: Border.all(
                               color: Colors.black,
@@ -86,10 +86,10 @@ class _registerState extends State<volunteerpages> {
                             ),
                           ),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                            //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                             children: [
                               Image.asset(
-                                'assets/re6.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
+                                'assets/rep1.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
                                 width: 80,
                                 height: 80,
                               ),
@@ -98,13 +98,12 @@ class _registerState extends State<volunteerpages> {
                                   style:  TextStyle(
                                     color: Colors.black,
                                     fontFamily:'PSL116',
-
+                                    fontSize: 35,
                                     fontWeight: FontWeight.bold,
                                   ),
                                   children: [
-
                                     TextSpan(
-                                      text: 'อาสาสมัคร', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
+                                      text: '   รายงาน', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
                                       style: TextStyle(
                                         fontSize: 35,
                                       ),
@@ -116,18 +115,18 @@ class _registerState extends State<volunteerpages> {
                           ),
                         ),
 
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 20),
                         ElevatedButton(
                           onPressed: () {
                             Navigator.of(context).push(
                                 MaterialPageRoute(builder: (BuildContext context) {
-                                  return recordwastepages();
+                                  return greenhousepages();
                                 }));
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
-                            minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                            padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                            backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                            minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                            padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                             side: BorderSide.none, // กำหนดไม่มีกรอบสี
                             shape: RoundedRectangleBorder(
@@ -135,10 +134,10 @@ class _registerState extends State<volunteerpages> {
                             ),
                           ),
                           child: Container(
-                            width: 270,
-                            height: 90,
+                            width: 320,
+                            height: 60,
                             decoration: BoxDecoration(
-                              color: Color(0xFFE3CB8E),
+                              color: const Color(0xFFE3CB8E),
                               borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                               border: Border.all(
                                 color: Colors.black,
@@ -149,27 +148,27 @@ class _registerState extends State<volunteerpages> {
                               //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                               children: [
                                 Image.asset(
-                                  'assets/re4.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
+                                  'assets/rep4.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
                                   width: 80,
                                   height: 80,
                                 ),
                                 Container(
-                                  width: 20,
+                                  width: 2,
+
                                 ),
                                 RichText(
                                   text: const TextSpan(
                                     style:  TextStyle(
                                       color: Colors.black,
                                       fontFamily:'PSL116',
-
+                                      fontSize: 30,
                                       fontWeight: FontWeight.bold,
                                     ),
                                     children: [
-
                                       TextSpan(
-                                        text: 'บันทึกข้อมูลขยะ', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
+                                        text: 'การปล่อยก๊าซเรือนกระจก', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
                                         style: TextStyle(
-                                          fontSize: 30,
+                                          fontSize: 32,
                                         ),
                                       ),
                                     ],
@@ -179,18 +178,18 @@ class _registerState extends State<volunteerpages> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 20),
                         ElevatedButton(
                           onPressed: () {
                             Navigator.of(context).push(
                                 MaterialPageRoute(builder: (BuildContext context) {
-                                  return recordincomepages();
+                                  return lowgreenhousepages();
                                 }));
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
-                            minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                            padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                            backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                            minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                            padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                             side: BorderSide.none, // กำหนดไม่มีกรอบสี
                             shape: RoundedRectangleBorder(
@@ -198,10 +197,10 @@ class _registerState extends State<volunteerpages> {
                             ),
                           ),
                           child: Container(
-                            width: 270,
-                            height: 90,
+                            width: 320,
+                            height: 60,
                             decoration: BoxDecoration(
-                              color: Color(0xFFE3CB8E),
+                              color: const Color(0xFFE3CB8E),
                               borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                               border: Border.all(
                                 color: Colors.black,
@@ -209,26 +208,94 @@ class _registerState extends State<volunteerpages> {
                               ),
                             ),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                              //mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                               children: [
                                 Image.asset(
-                                  'assets/re3.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
+                                  'assets/rep2.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
                                   width: 80,
                                   height: 80,
                                 ),
+                                Container(
+                                  width: 6,
 
+                                ),
                                 RichText(
                                   text: const TextSpan(
                                     style:  TextStyle(
                                       color: Colors.black,
                                       fontFamily:'PSL116',
+                                      fontSize: 35,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    children: [
+
+                                      TextSpan(
+                                        text: 'การลดก๊าซเรือนกระจก', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
+                                        style: TextStyle(
+                                          fontSize: 32,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                                MaterialPageRoute(builder: (BuildContext context) {
+                                  return incomepages();
+                                }));
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                            minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                            padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
+                            side: BorderSide.none, // กำหนดไม่มีกรอบสี
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20), // กำหนดรูปร่างของปุ่มเป็นขอบมน
+                            ),
+                          ),
+                          child: Container(
+                            width: 320,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFE3CB8E),
+                              borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
+                              border: Border.all(
+                                color: Colors.black,
+                                width: 1.5,
+                              ),
+                            ),
+                            child: Row(
+                              //mainAxisAlignment: MainAxisAlignment.spaceBetween, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
+                              children: [
+                                Image.asset(
+                                  'assets/rep3.png', // แทนที่ assets/icon.png ด้วยพาธของไอคอนที่คุณต้องการ
+                                  width: 80,
+                                  height: 80,
+                                ),
+                                Container(
+                                  width: 60,
+
+                                ),
+                                RichText(
+                                  text: const TextSpan(
+                                    style:  TextStyle(
+                                      color: Colors.black,
+                                      fontFamily:'PSL116',
+                                      fontSize: 35,
                                       fontWeight: FontWeight.bold,
                                     ),
                                     children: [
                                       TextSpan(
-                                        text: 'บันทึกรายได้ของขยะ', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
+                                        text: 'รายได้', // ข้อความบรรทัดใหม่ ซึ่งขนาดจะเปลี่ยนแค่บรรทัดนี้เท่านั้น
                                         style: TextStyle(
-                                          fontSize: 30,
+                                          fontSize: 32,
                                         ),
                                       ),
                                     ],
@@ -242,7 +309,7 @@ class _registerState extends State<volunteerpages> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -251,18 +318,18 @@ class _registerState extends State<volunteerpages> {
                         width: 170,
                         height: 100,
                       ),
-                      SizedBox(width: 20), // ใส่ SizedBox เพื่อให้มีระยะห่างระหว่าง Container
+                      const SizedBox(width: 20), // ใส่ SizedBox เพื่อให้มีระยะห่างระหว่าง Container
                       ElevatedButton(
                         onPressed: () {
                           Navigator.of(context).push(
                               MaterialPageRoute(builder: (BuildContext context) {
-                                return recyclingpages();
+                                return mainpages();
                               }));
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
-                          minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                          padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                          backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                          minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                          padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                           tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                           side: BorderSide.none, // กำหนดไม่มีกรอบสี
                           shape: RoundedRectangleBorder(
@@ -273,7 +340,7 @@ class _registerState extends State<volunteerpages> {
                           width: 100,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: Color(0xFF302714),
+                            color: const Color(0xFF302714),
                             borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                             border: Border.all(
                               color: Colors.black,
@@ -283,7 +350,6 @@ class _registerState extends State<volunteerpages> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly, // จัดให้รูปภาพอยู่ทางซ้ายและข้อความอยู่ทางขวาของ Container
                             children: [
-
                               RichText(
                                 text: const TextSpan(
                                   style:  TextStyle(

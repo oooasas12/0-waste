@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:waste/pages/recyclingpages.dart';
+import 'package:waste/pages/reportpages.dart';
 import 'package:waste/pages/wasteherepages.dart';
 import 'package:waste/pages/incpages.dart';
 
@@ -13,7 +14,7 @@ class _registerState extends State<mainpages> {
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/bg1.png'),
               fit: BoxFit.cover,
@@ -28,7 +29,7 @@ class _registerState extends State<mainpages> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Transform.translate(
-                      offset: Offset(-5, -2),
+                      offset: const Offset(-5, -2),
                       child: Transform.scale(
                         scale: 1.4,
                         child: Image.asset(
@@ -64,7 +65,7 @@ class _registerState extends State<mainpages> {
                     ),
                   ],
                 ),
-                  SizedBox(height: 10),
+                const SizedBox(height: 10),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -80,10 +81,10 @@ class _registerState extends State<mainpages> {
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFEBE5D2), // กำหนดสีพื้นหลังของปุ่ม
+                              backgroundColor: const Color(0xFFEBE5D2), // กำหนดสีพื้นหลังของปุ่ม
                               elevation: 0,// กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
-                              minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                              padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                              minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                              padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                               side: BorderSide.none, // กำหนดไม่มีกรอบสี
                               shape: RoundedRectangleBorder(
@@ -94,7 +95,7 @@ class _registerState extends State<mainpages> {
                               width: 160,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: Color(0xFFE3CB8E),
+                                color: const Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
@@ -140,9 +141,9 @@ class _registerState extends State<mainpages> {
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
-                              minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                              padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                              backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                              minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                              padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                               side: BorderSide.none, // กำหนดไม่มีกรอบสี
                               shape: RoundedRectangleBorder(
@@ -153,7 +154,7 @@ class _registerState extends State<mainpages> {
                               width: 160,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: Color(0xFFE3CB8E),
+                                color: const Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
@@ -199,9 +200,9 @@ class _registerState extends State<mainpages> {
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
-                              minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                              padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                              backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                              minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                              padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                               side: BorderSide.none, // กำหนดไม่มีกรอบสี
                               shape: RoundedRectangleBorder(
@@ -212,7 +213,7 @@ class _registerState extends State<mainpages> {
                               width: 160,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: Color(0xFFE3CB8E),
+                                color: const Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
@@ -255,13 +256,13 @@ class _registerState extends State<mainpages> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return wasteherepages();
+                                    return const wasteherepages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
-                              minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                              padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                              backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                              minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                              padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                               side: BorderSide.none, // กำหนดไม่มีกรอบสี
                               shape: RoundedRectangleBorder(
@@ -272,7 +273,7 @@ class _registerState extends State<mainpages> {
                               width: 160,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: Color(0xFFE3CB8E),
+                                color: const Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
@@ -311,7 +312,7 @@ class _registerState extends State<mainpages> {
                           ),
                         ],
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Container(
                         width: 10,
                         height: 10,
@@ -324,14 +325,14 @@ class _registerState extends State<mainpages> {
                             onPressed: () {
                               Navigator.of(context).push(
                                   MaterialPageRoute(builder: (BuildContext context) {
-                                    return mainpages();
+                                    return reportpages();
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFEBE5D2), // กำหนดสีพื้นหลังของปุ่ม
+                              backgroundColor: const Color(0xFFEBE5D2), // กำหนดสีพื้นหลังของปุ่ม
                               elevation: 0,// กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
-                              minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                              padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                              minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                              padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                               side: BorderSide.none, // กำหนดไม่มีกรอบสี
                               shape: RoundedRectangleBorder(
@@ -343,7 +344,7 @@ class _registerState extends State<mainpages> {
                               width: 160,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: Color(0xFFE3CB8E),
+                                color: const Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
@@ -389,9 +390,9 @@ class _registerState extends State<mainpages> {
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
-                              minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                              padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                              backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                              minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                              padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                               side: BorderSide.none, // กำหนดไม่มีกรอบสี
                               shape: RoundedRectangleBorder(
@@ -402,7 +403,7 @@ class _registerState extends State<mainpages> {
                               width: 160,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: Color(0xFFE3CB8E),
+                                color: const Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
@@ -451,9 +452,9 @@ class _registerState extends State<mainpages> {
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
-                              minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                              padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                              backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                              minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                              padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                               side: BorderSide.none, // กำหนดไม่มีกรอบสี
                               shape: RoundedRectangleBorder(
@@ -465,7 +466,7 @@ class _registerState extends State<mainpages> {
                               width: 160,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: Color(0xFFE3CB8E),
+                                color: const Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
@@ -517,9 +518,9 @@ class _registerState extends State<mainpages> {
                                   }));
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
-                              minimumSize: Size(10, 10), // กำหนดขนาดของปุ่ม
-                              padding: EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
+                              backgroundColor: const Color(0xFFE3CB8E), // กำหนดสีพื้นหลังของปุ่ม
+                              minimumSize: const Size(10, 10), // กำหนดขนาดของปุ่ม
+                              padding: const EdgeInsets.all(0), // กำหนดขอบเขตของปุ่มเป็น 0 เพื่อให้ไม่มีช่องว่าง
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap, // กำหนดขนาดเป็น ShrinkWrap เพื่อให้ปุ่มไม่มีช่องว่างด้านนอก
                               side: BorderSide.none, // กำหนดไม่มีกรอบสี
                               shape: RoundedRectangleBorder(
@@ -530,7 +531,7 @@ class _registerState extends State<mainpages> {
                               width: 160,
                               height: 80,
                               decoration: BoxDecoration(
-                                color: Color(0xFFE3CB8E),
+                                color: const Color(0xFFE3CB8E),
                                 borderRadius: BorderRadius.circular(20.0), // เปลี่ยนเป็นค่าที่ต้องการ
                                 border: Border.all(
                                   color: Colors.black,
